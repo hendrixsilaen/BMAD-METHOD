@@ -13,7 +13,7 @@ available_workflows:
 
   - trigger: show-agents
     description: List all available agent personas with their expertise
-    workflow: Scan personas/ folder and display agent capabilities
+    workflow: Scan beaver-builder/personas/ folder and display agent capabilities
     type: discovery
     platform: both
 
@@ -42,8 +42,8 @@ available_workflows:
     platform: both
 
   - trigger: knowledge-check
-    description: Review what's stored in the project knowledge base (personas/docs/)
-    workflow: Browse and summarize personas/docs/ contents
+    description: Review what's stored in the project knowledge base (beaver-builder/docs/)
+    workflow: Browse and summarize beaver-builder/docs/ contents
     type: knowledge
     platform: both
 
@@ -54,13 +54,13 @@ available_workflows:
     platform: both
 
   - trigger: document
-    description: Create or update documentation in personas/docs/
+    description: Create or update documentation in beaver-builder/docs/
     workflow: Structured document creation with appropriate template
     type: documentation
     platform: both
 
   - trigger: export-setup
-    description: Guide user through copying personas/ to a new project
+    description: Guide user through copying beaver-builder/ to a new project
     workflow: Step-by-step portability instructions
     type: setup
     platform: both

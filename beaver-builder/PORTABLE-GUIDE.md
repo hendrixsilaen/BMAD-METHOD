@@ -1,6 +1,6 @@
 # Portable Personas System - Usage Guide
 
-This guide explains how to use the `personas/` folder as a **portable, self-contained AI agent team** that works with any project.
+This guide explains how to use the `beaver-builder/` folder as a **portable, self-contained AI agent team** that works with any project.
 
 ---
 
@@ -8,35 +8,35 @@ This guide explains how to use the `personas/` folder as a **portable, self-cont
 
 Instead of being tied to a specific framework or methodology, you can:
 
-1. **Copy the `personas/` folder to any project**
+1. **Copy the `beaver-builder/` folder to any project**
 2. **Load the orchestrator** in your IDE/AI assistant
 3. **Start working immediately** - agents adapt to your project
-4. **Build project knowledge** that persists in `personas/docs/`
+4. **Build project knowledge** that persists in `beaver-builder/docs/`
 5. **Collaborate across 20+ expert personas** specialized in different domains
 
 ---
 
-## 📁 What's in the Personas Folder?
+## 📁 What's in the Beaver Builder Folder?
 
 ```
-personas/
+beaver-builder/
 ├── README.md                    # Overview of all agents
 ├── PORTABLE-GUIDE.md           # This file
-├── orchestrator/               # The AI that coordinates all other agents
-│   ├── README.md
-│   ├── persona.yaml
-│   └── workflows.yaml
-├── docs/                       # Project-specific knowledge (grows over time)
-│   ├── project-context/
-│   ├── architecture/
-│   ├── requirements/
-│   ├── research/
-│   └── meetings/
-└── [20+ agent folders]/        # Specialized expert personas
-    ├── john/                   # PM
-    ├── amelia/                 # Developer
-    ├── winston/                # Architect
-    └── ...                     # And 17 more
+├── personas/                   # All specialized expert agents
+│   ├── orchestrator/           # The AI that coordinates all other agents
+│   │   ├── README.md
+│   │   ├── persona.yaml
+│   │   └── workflows.yaml
+│   ├── john/                   # PM
+│   ├── amelia/                 # Developer
+│   ├── winston/                # Architect
+│   └── ...                     # And 17 more
+└── docs/                       # Project-specific knowledge (grows over time)
+    ├── project-context/
+    ├── architecture/
+    ├── requirements/
+    ├── research/
+    └── meetings/
 ```
 
 ---
@@ -46,18 +46,18 @@ personas/
 ### Step 1: Copy to Your Project
 
 ```bash
-# Copy the entire personas folder to your project root
-cp -r /path/to/BMAD-METHOD/personas /your/project/
+# Copy the entire beaver-builder folder to your project root
+cp -r /path/to/BMAD-METHOD/beaver-builder /your/project/
 
 # Or create a fresh copy for a new project
-cp -r personas /new/project/personas
+cp -r beaver-builder /new/project/beaver-builder
 ```
 
 ### Step 2: Load the Orchestrator
 
 **In your IDE or AI assistant:**
 
-1. Navigate to `personas/orchestrator/README.md`
+1. Navigate to `beaver-builder/personas/orchestrator/README.md`
 2. Load/read the orchestrator persona definition
 3. Start a conversation
 
@@ -68,7 +68,7 @@ You: "Hi, I'm working on a new project"
 
 Orchestrator: "👋 Welcome! I see this is our first interaction..."
 [Guides you through project discovery]
-[Creates personas/docs/project-context/project-overview.md]
+[Creates beaver-builder/docs/project-context/project-overview.md]
 ```
 
 ### Step 4: Start Working
@@ -78,7 +78,7 @@ You: "I need to design the database schema"
 
 Orchestrator: "🎯 Engaging Winston (Architect) and Amelia (Developer)..."
 [Agents collaborate and provide expertise]
-[Updates personas/docs/architecture/ with decisions]
+[Updates beaver-builder/docs/architecture/ with decisions]
 ```
 
 ---
@@ -92,7 +92,7 @@ The **Orchestrator** persona is like a smart dispatcher:
 - **Analyzes your request** - "This is about architecture and testing"
 - **Selects relevant agents** - "Let me bring in Winston and Murat"
 - **Facilitates collaboration** - Agents discuss in their unique styles
-- **Documents outcomes** - Stores insights in `personas/docs/`
+- **Documents outcomes** - Stores insights in `beaver-builder/docs/`
 
 ### 2. Agents Read Persona Definitions Dynamically
 
@@ -106,10 +106,10 @@ The orchestrator reads these to understand who can help with what.
 
 ### 3. Project Knowledge Accumulates
 
-Everything learned goes into `personas/docs/`:
+Everything learned goes into `beaver-builder/docs/`:
 
 ```
-personas/docs/
+beaver-builder/docs/
 ├── project-context/
 │   ├── project-progress.md           ← 🎯 MAIN tracker (all agents update)
 │   └── project-overview.md           ← Created on first use
@@ -185,8 +185,8 @@ Orchestrator:
 📖 Reading project status... No existing project found.
 📝 Initializing new project tracking system...
 
-✅ Created: personas/docs/project-context/project-progress.md
-✅ Created: personas/docs/project-context/project-overview.md
+✅ Created: beaver-builder/docs/project-context/project-progress.md
+✅ Created: beaver-builder/docs/project-context/project-overview.md
 
 Let me gather initial context...
 - What's your target audience?
@@ -203,9 +203,9 @@ Let me gather initial context...
 [Agents collaborate]
 
 📚 Documentation created:
-- personas/docs/requirements/task-manager-prd.md
-- personas/docs/architecture/initial-design.md
-- personas/docs/architecture/tech-stack-decisions.md
+- beaver-builder/docs/requirements/task-manager-prd.md
+- beaver-builder/docs/architecture/initial-design.md
+- beaver-builder/docs/architecture/tech-stack-decisions.md
 
 📊 Updated project-progress.md:
   ✅ Completed: Project discovery & requirements gathering (John, Mary)
@@ -236,8 +236,8 @@ Murat: "We should add performance tests to catch this..."
 [After investigation]
 
 📝 Updated:
-- personas/docs/architecture/performance-optimization.md
-- personas/docs/meetings/api-timeout-resolution.md
+- beaver-builder/docs/architecture/performance-optimization.md
+- beaver-builder/docs/meetings/api-timeout-resolution.md
 
 📊 Updated project-progress.md:
   🚨 Blocker Resolved: API timeout on large queries
@@ -265,7 +265,7 @@ Maya: "Building on Carson's idea #3, what if..."
 Sophia: "I can frame this as a hero's journey narrative..."
 
 📝 Created:
-- personas/docs/research/marketing-campaign-ideas.md
+- beaver-builder/docs/research/marketing-campaign-ideas.md
 ```
 
 ---
@@ -287,7 +287,7 @@ Orchestrator: "✅ Direct agent engagement requested..."
 You: "What decisions have we made about authentication?"
 
 Orchestrator: "📖 Searching knowledge base..."
-[Reads personas/docs/architecture/ and personas/docs/requirements/]
+[Reads beaver-builder/docs/architecture/ and beaver-builder/docs/requirements/]
 [Summarizes all auth-related decisions]
 ```
 
@@ -295,8 +295,8 @@ Orchestrator: "📖 Searching knowledge base..."
 
 ```
 # Copy learnings from Project A to Project B
-cp -r /projectA/personas/docs/architecture/auth-patterns.md \
-      /projectB/personas/docs/architecture/
+cp -r /projectA/beaver-builder/docs/architecture/auth-patterns.md \
+      /projectB/beaver-builder/docs/architecture/
 
 # Now Project B agents can reference Project A's solutions
 ```
@@ -304,12 +304,12 @@ cp -r /projectA/personas/docs/architecture/auth-patterns.md \
 ### Exporting Portable Snapshots
 
 ```bash
-# Create a clean personas folder for distribution
-tar -czf personas-snapshot-2024-11-18.tar.gz personas/
+# Create a clean beaver-builder folder for distribution
+tar -czf beaver-builder-snapshot-2024-11-18.tar.gz beaver-builder/
 
 # Share with team or use in new projects
 # Extract and start fresh
-tar -xzf personas-snapshot-2024-11-18.tar.gz -C /new/project/
+tar -xzf beaver-builder-snapshot-2024-11-18.tar.gz -C /new/project/
 ```
 
 ---
@@ -334,7 +334,7 @@ Orchestrator: [Lists all docs with summaries]
 ### 4. Archive Old Projects
 
 ```
-personas/docs/
+beaver-builder/docs/
 ├── current-project/          # Active work
 └── archive/
     └── old-project-2024/     # Keep past learnings
@@ -398,12 +398,12 @@ principles:
 
 ### "Orchestrator doesn't know about my project"
 
-→ Check if `personas/docs/project-context/` has project-overview.md
+→ Check if `beaver-builder/docs/project-context/` has project-overview.md
 → Run: "Initialize project" to set up
 
 ### "Agents repeat questions"
 
-→ Ensure decisions are documented in personas/docs/
+→ Ensure decisions are documented in beaver-builder/docs/
 → Ask orchestrator: "Document this decision"
 
 ### "Wrong agents being selected"
@@ -420,15 +420,15 @@ principles:
 
 ## 📦 Portability Checklist
 
-When copying `personas/` to a new project:
+When copying `beaver-builder/` to a new project:
 
-- [ ] Copy entire `personas/` folder to project root
+- [ ] Copy entire `beaver-builder/` folder to project root
 - [ ] Keep folder structure intact (especially `docs/`)
 - [ ] Load orchestrator persona first
 - [ ] Run "initialize" to set up project context
 - [ ] Verify agents can read persona.yaml files
 - [ ] Test by asking a simple question
-- [ ] Confirm docs are being created in `personas/docs/`
+- [ ] Confirm docs are being created in `beaver-builder/docs/`
 
 ---
 
@@ -477,13 +477,13 @@ For questions about the underlying BMAD METHOD framework:
 
 ## 🎉 You're Ready!
 
-Copy the `personas/` folder to your project and start building with your AI expert team!
+Copy the `beaver-builder/` folder to your project and start building with your AI expert team!
 
 ```bash
 # Quick start
-cp -r personas /your/project/
+cp -r beaver-builder /your/project/
 cd /your/project
-# Load personas/orchestrator/README.md in your IDE
+# Load beaver-builder/personas/orchestrator/README.md in your IDE
 # Say: "Hi, I need help with my project"
 # Let the magic happen! ✨
 ```

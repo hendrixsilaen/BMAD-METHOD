@@ -4,7 +4,7 @@ This folder contains all project-specific knowledge gathered and maintained by t
 
 ## Purpose
 
-When you copy the `personas/` folder to any project, the agents use this `docs/` directory to:
+When you copy the `beaver-builder/` folder to any project, the agents use this `docs/` directory to:
 
 - Learn about your project
 - Store gathered context and insights
@@ -109,7 +109,7 @@ As work progresses, agents will:
 
 ### First Time Setup
 
-1. Copy the entire `personas/` folder to your project
+1. Copy the entire `beaver-builder/` folder to your project
 2. Run the orchestrator to introduce your project
 3. Agents will ask initial questions and create base documentation
 
@@ -190,7 +190,7 @@ Create consistent documentation using agent-specific templates:
 
 ## Portability
 
-This entire `personas/` folder is designed to be:
+This entire `beaver-builder/` folder is designed to be:
 
 - **Self-contained**: Everything needed is in this folder
 - **Portable**: Copy to any project and start working

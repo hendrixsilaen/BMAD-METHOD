@@ -4,7 +4,7 @@ This directory contains all the AI agent personas from the BMAD METHOD project. 
 
 ## 🚀 Portable AI Expert Team
 
-**NEW:** This `personas/` folder is now **completely portable and self-contained**!
+**NEW:** This `beaver-builder/` folder is now **completely portable and self-contained**!
 
 Copy it to any project and get instant access to 20+ specialized AI agents coordinated by an intelligent orchestrator. No framework dependencies, no complex setup - just drop it in your project and start collaborating.
 
@@ -12,8 +12,8 @@ Copy it to any project and get instant access to 20+ specialized AI agents coord
 
 ### Quick Start (Portable Mode)
 
-1. Copy `personas/` folder to your project
-2. Load `personas/orchestrator/README.md` in your IDE
+1. Copy `beaver-builder/` folder to your project
+2. Load `beaver-builder/personas/orchestrator/README.md` in your IDE
 3. Say: _"Hi, I need help with my project"_
 4. Let the orchestrator engage the right agents for your needs
 
@@ -34,30 +34,31 @@ The BMAD METHOD orchestrates **20+ specialized AI agents** across multiple modul
 ## Directory Structure
 
 ```
-personas/
+beaver-builder/
 ├── README.md                # This file - overview of all agents
 ├── PORTABLE-GUIDE.md       # Complete guide for using personas in any project
-├── orchestrator/           # 🎭 Your entry point for multi-agent coordination
-│   ├── README.md           # Orchestrator documentation
-│   ├── persona.yaml        # Orchestrator definition
-│   └── workflows.yaml      # Orchestrator capabilities
-├── docs/                   # 📚 Project knowledge base (grows over time)
-│   ├── project-context/    # Core project information
-│   ├── architecture/       # System design and decisions
-│   ├── requirements/       # Product specs and stories
-│   ├── research/           # Analysis and insights
-│   └── meetings/           # Decision records
-└── {agent-name}/           # 20+ specialized expert agents
-    ├── README.md           # Full agent documentation
-    ├── persona.yaml        # Structured persona data
-    └── workflows.yaml      # Available workflows and capabilities
+├── personas/               # 🎭 All specialized expert agents
+│   ├── orchestrator/       # Your entry point for multi-agent coordination
+│   │   ├── README.md       # Orchestrator documentation
+│   │   ├── persona.yaml    # Orchestrator definition
+│   │   └── workflows.yaml  # Orchestrator capabilities
+│   └── {agent-name}/       # 20+ specialized expert agents
+│       ├── README.md       # Full agent documentation
+│       ├── persona.yaml    # Structured persona data
+│       └── workflows.yaml  # Available workflows and capabilities
+└── docs/                   # 📚 Project knowledge base (grows over time)
+    ├── project-context/    # Core project information
+    ├── architecture/       # System design and decisions
+    ├── requirements/       # Product specs and stories
+    ├── research/           # Analysis and insights
+    └── meetings/           # Decision records
 ```
 
 ### What Each Component Does:
 
-- **orchestrator/**: Intelligent coordinator that selects and engages the right agents for each task
+- **personas/orchestrator/**: Intelligent coordinator that selects and engages the right agents for each task
+- **personas/{agent-name}/**: Individual expert personas with specialized skills
 - **docs/**: Project-specific knowledge that all agents can read and contribute to
-- **agent folders/**: Individual expert personas with specialized skills
 
 Each agent folder contains:
 
@@ -69,7 +70,7 @@ Each agent folder contains:
 
 ### 🎭 Orchestrator (START HERE!)
 
-- **[Orchestrator](./orchestrator/)** 🎭 - **Portable multi-agent coordinator** (use this in any project!)
+- **[Orchestrator](./personas/orchestrator/)** 🎭 - **Portable multi-agent coordinator** (use this in any project!)
   - **Handles ANY request** through systematic analysis framework
   - Intelligently routes requests to relevant agents with transparent reasoning
   - Asks clarifying questions for ambiguous requests
@@ -77,45 +78,45 @@ Each agent folder contains:
   - Maintains project knowledge base and progress tracking in `docs/`
   - Facilitates multi-agent collaboration (2-3 agents per response)
   - Works without any framework dependencies
-  - **[See Request Handling Guide](./orchestrator/REQUEST-HANDLING-GUIDE.md)** for examples
+  - **[See Request Handling Guide](./personas/orchestrator/REQUEST-HANDLING-GUIDE.md)** for examples
 
 ### Core Module (Original BMAD Agents)
 
-- **[BMad Master](./bmad-master/)** 🧙 - Master orchestrator and workflow coordinator (BMAD framework)
-- **[BMad Builder](./bmad-builder/)** 🧙 - Module Builder (Master BMad Module Agent Team Builder)
+- **[BMad Master](./personas/bmad-master/)** 🧙 - Master orchestrator and workflow coordinator (BMAD framework)
+- **[BMad Builder](./personas/bmad-builder/)** 🧙 - Module Builder (Master BMad Module Agent Team Builder)
 
 ### BMM - BMad Method Module (9 agents)
 
 Software development and agile project management specialists:
 
-- **[John](./john/)** 📋 - Product Manager (Investigative Product Strategist)
-- **[Mary](./mary/)** 📊 - Business Analyst (Strategic Business Analyst)
-- **[Winston](./winston/)** 🏗️ - Architect (Solutions Architect)
-- **[Amelia](./amelia/)** 💻 - Developer (Senior Software Engineer)
-- **[Bob](./bob/)** 🏃 - Scrum Master (Technical Scrum Master)
-- **[Murat](./murat/)** 🧪 - Test Architect (Quality & Test Strategy Expert)
-- **[Sally](./sally/)** 🎨 - UX Designer (User Experience Designer)
-- **[Paige](./paige/)** 📚 - Technical Writer (Documentation Specialist)
-- **[Saif](./saif/)** 📐 - Frame Expert (Diagramming & Visualization Specialist)
+- **[John](./personas/john/)** 📋 - Product Manager (Investigative Product Strategist)
+- **[Mary](./personas/mary/)** 📊 - Business Analyst (Strategic Business Analyst)
+- **[Winston](./personas/winston/)** 🏗️ - Architect (Solutions Architect)
+- **[Amelia](./personas/amelia/)** 💻 - Developer (Senior Software Engineer)
+- **[Bob](./personas/bob/)** 🏃 - Scrum Master (Technical Scrum Master)
+- **[Murat](./personas/murat/)** 🧪 - Test Architect (Quality & Test Strategy Expert)
+- **[Sally](./personas/sally/)** 🎨 - UX Designer (User Experience Designer)
+- **[Paige](./personas/paige/)** 📚 - Technical Writer (Documentation Specialist)
+- **[Saif](./personas/saif/)** 📐 - Frame Expert (Diagramming & Visualization Specialist)
 
 ### BMGD - BMad Game Development Module (4 agents)
 
 Game development specialists:
 
-- **[Cloud Dragonborn](./cloud-dragonborn/)** 🏛️ - Game Designer
-- **[Max](./max/)** 🎯 - Game Scrum Master
-- **[Link Freeman](./link-freeman/)** 🕹️ - Game Developer
-- **[Samus Shepard](./samus-shepard/)** 🎲 - Game Architect
+- **[Cloud Dragonborn](./personas/cloud-dragonborn/)** 🏛️ - Game Designer
+- **[Max](./personas/max/)** 🎯 - Game Scrum Master
+- **[Link Freeman](./personas/link-freeman/)** 🕹️ - Game Developer
+- **[Samus Shepard](./personas/samus-shepard/)** 🎲 - Game Architect
 
 ### CIS - Creative Intelligence Suite Module (5 agents)
 
 Creative facilitation and innovation specialists:
 
-- **[Carson](./carson/)** 🧠 - Elite Brainstorming Specialist
-- **[Dr. Quinn](./dr-quinn/)** 🔬 - Design Thinking Coach
-- **[Maya](./maya/)** 🎨 - Creative Problem Solver
-- **[Victor](./victor/)** ⚡ - Innovation Strategist
-- **[Sophia](./sophia/)** 📖 - Storyteller
+- **[Carson](./personas/carson/)** 🧠 - Elite Brainstorming Specialist
+- **[Dr. Quinn](./personas/dr-quinn/)** 🔬 - Design Thinking Coach
+- **[Maya](./personas/maya/)** 🎨 - Creative Problem Solver
+- **[Victor](./personas/victor/)** ⚡ - Innovation Strategist
+- **[Sophia](./personas/sophia/)** 📖 - Storyteller
 
 ## Agent Characteristics
 
