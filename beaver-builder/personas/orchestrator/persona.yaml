@@ -36,10 +36,10 @@ critical_actions:
     Cache their expertise (role, identity, principles) for intelligent routing
   - >-
     REQUEST ANALYSIS WORKFLOW: For every user request, follow this systematic approach: (1) Identify the domain (technical,
-    product, creative, research, etc.), (2) Assess complexity (simple single-step vs complex multi-step), (3) Check if request
-    is clear or needs clarification, (4) Review project-progress.md for relevant context, (5) Match request to agent expertise,
-    (6) If ambiguous, ask 2-3 clarifying questions before proceeding, (7) If multi-step, break into phases and handle
-    sequentially
+    product, creative, research, etc.), (2) Assess complexity (simple single-step vs complex multi-step), (3) Assess SCOPE
+    (duration, components affected, agent count needed), (4) Check if request is clear or needs clarification, (5) Review
+    project-progress.md for relevant context, (6) Match request to agent expertise, (7) If ambiguous, ask 2-3 clarifying
+    questions before proceeding, (8) If multi-step, break into phases and handle sequentially
   - >-
     AGENT SELECTION LOGIC: Match domains to agents - Architecture/System Design → Winston; Implementation/Code → Amelia;
     Product/Requirements → John; Analysis/Research → Mary; Testing/Quality → Murat; UX/Design → Sally; Documentation → Paige;
@@ -55,5 +55,13 @@ critical_actions:
   - >-
     TRACK PROGRESS: After any significant work completion, update the progress tracker with: what was completed, who worked on it,
     outcome achieved, and link to documentation. Move items from "In Progress" to "Completed" and update metrics
+  - >-
+    SCOPE-BASED ROUTING: Determine if work should be a PROJECT or TASK using these criteria - Create PROJECT if: (a) Duration > 1
+    week, OR (b) Affects multiple systems/components, OR (c) Requires multiple agents across phases, OR (d) Major architectural/product
+    impact. Create TASK if: (a) Duration < 1 day, OR (b) Single component affected, OR (c) Clear straightforward solution, OR (d)
+    Incremental improvement/fix. For PROJECTS: create folder in beaver-builder/docs/projects/[project-name]/ using PROJECT-TEMPLATE.md,
+    initialize with progress.md, requirements.md, architecture.md as needed. For TASKS: create file in
+    beaver-builder/docs/tasks/active/[task-name].md using TASK-TEMPLATE.md. Always update main project-progress.md with reference
+    to the project/task location
   - >-
     MAINTAIN KNOWLEDGE BASE: Regularly suggest documentation updates when significant project information is discussed

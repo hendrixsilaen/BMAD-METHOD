@@ -18,15 +18,42 @@ When you copy the `beaver-builder/` folder to any project, the agents use this `
 docs/
 ├── README.md (this file)
 ├── project-context/     # Core project information
-│   ├── project-progress.md          # 🎯 MAIN PROGRESS TRACKER (start here!)
+│   ├── project-progress.md          # 🎯 MAIN PROGRESS TRACKER (high-level overview)
 │   ├── project-progress-template.md # Template for new projects
 │   ├── project-progress.example.md  # Example filled-in tracker
 │   └── project-overview.md          # Project goals and context
-├── architecture/        # System design and technical decisions
-├── requirements/        # Product requirements and specifications
-├── research/            # Market research, competitor analysis
-└── meetings/            # Meeting notes and decision records
+│
+├── projects/            # 🚀 MAJOR INITIATIVES (multi-week work)
+│   ├── PROJECT-TEMPLATE.md          # Template for new projects
+│   ├── README.md                    # Guide to project management
+│   ├── [project-name]/              # Individual project folders
+│   │   ├── progress.md              # Project-specific progress
+│   │   ├── requirements.md          # Detailed requirements
+│   │   ├── architecture.md          # System design
+│   │   └── ...                      # Other project docs
+│   └── _archived/                   # Completed projects
+│
+├── tasks/               # ✅ SMALL CHANGES (hours/days work)
+│   ├── TASK-TEMPLATE.md             # Template for new tasks
+│   ├── README.md                    # Guide to task management
+│   ├── active/                      # Currently active tasks
+│   │   └── [task-name].md          # Individual task files
+│   └── completed/                   # Archived completed tasks
+│       └── YYYY-MM/                # Organized by month
+│
+├── architecture/        # 🏗️ SHARED: Global architecture patterns
+├── requirements/        # 📋 SHARED: Global requirements
+├── research/            # 🔬 SHARED: Market research, competitor analysis
+└── meetings/            # 📝 SHARED: Meeting notes and decision records
 ```
+
+### Organizational Philosophy
+
+**Projects vs Tasks:**
+
+- **Projects** (`projects/`) - Major initiatives taking > 1 week, affecting multiple systems, requiring phases
+- **Tasks** (`tasks/`) - Small changes taking < 1 day, single component, straightforward solution
+- **Shared Folders** - Global patterns and knowledge that span across all work
 
 ## 🎯 Progress Tracking System
 
@@ -67,6 +94,48 @@ This is the **single source of truth** for project status that all agents read a
 - **Orchestrator** - Maintains overall structure and coordinates updates
 - **All agents** - Add their contributions and progress
 - **You** - Can manually update anytime
+
+---
+
+## 🎯 Scope-Based Routing
+
+The Orchestrator automatically determines whether work should be organized as a PROJECT or TASK:
+
+### When to Create a PROJECT
+
+The Orchestrator creates a project folder when work:
+
+- **Duration** > 1 week
+- **Affects** multiple systems or components
+- **Requires** multiple agents across different phases
+- Has **major** architectural or product impact
+
+**Example:** "Build authentication system with OAuth, 2FA, and session management"
+→ Creates `projects/auth-system/` with full documentation structure
+
+### When to Create a TASK
+
+The Orchestrator creates a task file when work:
+
+- **Duration** < 1 day
+- **Affects** single component or file
+- Has **clear** straightforward solution
+- Is an **incremental** improvement or fix
+
+**Example:** "Fix login timeout issue"
+→ Creates `tasks/active/fix-login-timeout.md`
+
+### The Orchestrator Process
+
+1. **Analyzes** your request for domain, complexity, and scope
+2. **Determines** PROJECT vs TASK based on criteria
+3. **Creates** appropriate structure from templates
+4. **Engages** relevant agents
+5. **Updates** main `project-progress.md` with reference to work location
+6. **Tracks** progress throughout lifecycle
+7. **Archives** when complete
+
+See [projects/README.md](./projects/README.md) and [tasks/README.md](./tasks/README.md) for detailed guides.
 
 ## How Agents Use This Folder
 

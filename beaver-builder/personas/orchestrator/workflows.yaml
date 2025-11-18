@@ -70,3 +70,39 @@ available_workflows:
     workflow: Read and synthesize project-progress.md and related docs
     type: status
     platform: both
+
+  - trigger: create-project
+    description: Initialize a new major project with complete folder structure
+    workflow: Create project folder, initialize from PROJECT-TEMPLATE.md, set up phase tracking
+    type: project-management
+    platform: both
+
+  - trigger: create-task
+    description: Create a new task for small changes or bug fixes
+    workflow: Create task file from TASK-TEMPLATE.md in tasks/active/ folder
+    type: task-management
+    platform: both
+
+  - trigger: complete-task
+    description: Mark a task as completed and archive it
+    workflow: Update task status, fill completion summary, move to tasks/completed/YYYY-MM/
+    type: task-management
+    platform: both
+
+  - trigger: list-projects
+    description: Show all active and archived projects
+    workflow: Browse beaver-builder/docs/projects/ and summarize project statuses
+    type: project-management
+    platform: both
+
+  - trigger: list-tasks
+    description: Show all active tasks and their status
+    workflow: Browse beaver-builder/docs/tasks/active/ and summarize task statuses
+    type: task-management
+    platform: both
+
+  - trigger: scope-assessment
+    description: Analyze a request and determine if it should be a PROJECT or TASK
+    workflow: Apply scope criteria to determine appropriate organizational structure
+    type: analysis
+    platform: both
