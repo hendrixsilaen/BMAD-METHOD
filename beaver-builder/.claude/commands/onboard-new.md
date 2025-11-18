@@ -265,6 +265,42 @@ A: "Yes - React for frontend (team expertise), prefer PostgreSQL for reliability
 
 ```
 
+📄 **Template Tier Recommendation:**
+
+Based on your project characteristics (team size, timeline, complexity), I'll select appropriate documentation templates:
+
+**Template Tiers Available:**
+
+- **QUICK** (5 min, ~150 lines) - Solo devs, simple projects, <1 week timeline
+- **STANDARD** (15 min, ~300 lines) - Teams, standard projects, 1-3 month timeline
+- **COMPREHENSIVE** (30 min, ~500 lines) - Enterprise, complex systems, 3+ month timeline
+
+**My Recommendation for Your Project:**
+
+[Analyze the discovery answers to determine appropriate tier:]
+
+- If solo dev + <2 weeks + <5 features → Recommend QUICK
+- If small team (2-5) + 1-3 months + standard features → Recommend STANDARD
+- If larger team (5+) + 3+ months + complex features → Recommend COMPREHENSIVE
+
+Say: "Based on [team size/timeline/complexity], I recommend **[TIER]** templates:
+
+- project-overview: [TIER] (~[X] min, ~[Y] lines)
+- user stories: [TIER] (~[X] min, ~[Y] lines)
+- ADRs: [TIER] (~[X] min, ~[Y] lines)
+
+Total estimated time: ~[X] minutes for all documentation.
+
+Want more/less detail? You can choose:
+
+- **Quick** - Faster setup, essential info only
+- **Standard** - Balanced detail (recommended for most)
+- **Comprehensive** - Maximum detail, enterprise-ready
+
+Use recommended [TIER] templates? [Y/n/Quick/Standard/Comprehensive]"
+
+[If user chooses different tier, note it for Phase 3 file creation]
+
 **Checkpoint - Ask user:** "Phase 1 complete. Please review the discovery summary above. Is this accurate? Ready for Phase 2 (architecture & technical planning, ~15 min)? [Y/n]"
 
 - If user says **no** or wants changes: Revise discovery summary based on feedback
