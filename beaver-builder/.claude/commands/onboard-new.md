@@ -28,6 +28,29 @@ You are now the **Orchestrator** conducting a discovery interview for a new proj
 - "What does success look like for this project?"
 - "What are the key business or user outcomes?"
 
+**Example answers to help users:**
+
+```
+Q: What is the project's name and primary purpose?
+A: "TaskFlow - A collaborative task management platform for remote teams"
+
+Q: What problem does this project solve?
+A: "Remote teams struggle to coordinate tasks across time zones. TaskFlow provides
+real-time task sync with async updates and notifications."
+
+Q: Who are the target users?
+A: "Remote software development teams of 5-50 people who need better task coordination
+than email but simpler than Jira."
+
+Q: What does success look like?
+A: "Teams can create, assign, and complete tasks without confusion. 90% of updates
+happen within 24 hours. Team productivity increases by measurable amount."
+
+Q: What are the key business or user outcomes?
+A: "Reduce project delays by 30%, improve task completion rate, eliminate duplicate
+work from miscommunication."
+```
+
 **Capture:**
 
 - Project name, vision statement
@@ -43,6 +66,30 @@ You are now the **Orchestrator** conducting a discovery interview for a new proj
 - "What features are nice-to-have for future versions?"
 - "Are there any integrations or external systems to connect with?"
 - "What workflows or user journeys are most critical?"
+
+**Example answers to help users:**
+
+```
+Q: What are the core features needed?
+A: "User authentication, task CRUD (create/read/update/delete), real-time notifications,
+team collaboration, admin dashboard, reporting."
+
+Q: What are must-have features for v1?
+A: "Must have: User auth, create/assign tasks, basic notifications. Can ship without:
+Advanced reporting, integrations, mobile app."
+
+Q: What are nice-to-have for future versions?
+A: "Future: Slack integration, calendar sync, time tracking, file attachments,
+advanced permissions, API for third-party tools."
+
+Q: Any integrations needed?
+A: "v1: Email notifications only. v2: Slack, Microsoft Teams, Google Calendar.
+No CRM integration needed."
+
+Q: Most critical workflows?
+A: "1) Create task → assign to team member → get notified → complete → archive.
+2) Daily standup view showing everyone's tasks for today."
+```
 
 **Capture:**
 
@@ -61,6 +108,30 @@ You are now the **Orchestrator** conducting a discovery interview for a new proj
 - "Are there security or compliance requirements?"
 - "Do you have existing infrastructure or deployment preferences?"
 
+**Example answers to help users:**
+
+```
+Q: Preferred technologies or constraints?
+A: "Team knows React and Node.js well. Prefer TypeScript for type safety.
+Must use PostgreSQL (company standard). Avoid MongoDB."
+
+Q: Will this be web app, mobile app, API, or something else?
+A: "Responsive web app (desktop + mobile browser). Native mobile apps in v2.
+Need REST API for future integrations."
+
+Q: Performance, scalability, or availability requirements?
+A: "Must load in <2 seconds on 3G. Support 1,000 concurrent users initially,
+scale to 50K in 12 months. 99.9% uptime required (SLA with customers)."
+
+Q: Security or compliance requirements?
+A: "HIPAA compliant (healthcare data). Need encryption at rest and in transit.
+SOC 2 certification required by Q3. Regular security audits."
+
+Q: Existing infrastructure or deployment preferences?
+A: "Deploy to AWS (existing company account). Use Docker containers.
+Prefer ECS over Kubernetes (team expertise). CI/CD via GitHub Actions."
+```
+
 **Capture:**
 
 - Tech stack preferences or constraints
@@ -78,6 +149,30 @@ You are now the **Orchestrator** conducting a discovery interview for a new proj
 - "How will you measure progress?"
 - "Who are the key stakeholders or decision-makers?"
 
+**Example answers to help users:**
+
+```
+Q: How large is the development team?
+A: "5 people: 2 frontend developers, 2 backend developers, 1 DevOps engineer.
+Plus 1 PM and 1 designer (not full-time on this project)."
+
+Q: What development methodology?
+A: "2-week Agile sprints with daily standups. We use Jira for tracking but keep
+ceremonies lightweight (no lengthy retrospectives)."
+
+Q: What is the timeline?
+A: "Need working v1 in 3 months for investor demo. Full launch in 6 months.
+Hard deadline is June 1, 2026."
+
+Q: How will you measure progress?
+A: "Completed user stories per sprint, working features deployed to staging,
+test coverage >80%, daily active users after launch."
+
+Q: Who are the key stakeholders?
+A: "CEO (final product decisions), CTO (technical architecture), Head of Sales
+(needs demo features first), early beta customers (feedback loop)."
+```
+
 **Capture:**
 
 - Team size and roles
@@ -93,6 +188,28 @@ You are now the **Orchestrator** conducting a discovery interview for a new proj
 - "Are there any technical constraints (legacy systems, specific vendors)?"
 - "What are the biggest risks or concerns?"
 - "Are there dependencies on other projects or teams?"
+
+**Example answers to help users:**
+
+```
+Q: Are there budget constraints?
+A: "Limited to $10K/month for infrastructure. Must use free tier for most services
+in v1. Can increase budget after product-market fit."
+
+Q: Any technical constraints?
+A: "Must integrate with legacy ERP system (SOAP API, poor docs). Required to use
+company's existing AWS account. Can't use Google Cloud."
+
+Q: What are the biggest risks?
+A: "Technical: Legacy ERP integration is complex and poorly documented.
+Timeline: Hard deadline for conference demo in 3 months.
+Team: Only one developer knows the ERP system, creating bottleneck.
+Business: Competitor launching similar feature next quarter."
+
+Q: Dependencies on other projects?
+A: "Need authentication service from Platform team (promised by Feb 1).
+Dependent on Design team for UI mockups (not started yet, risk of delay)."
+```
 
 **Capture:**
 
