@@ -158,39 +158,49 @@ When party mode is activated, relevant agents are automatically selected based o
 - Implementation issues → Amelia (Dev) + Murat (TEA)
 - Creative brainstorming → Carson (Brainstorming Coach) + Maya (Problem Solver)
 
-### Direct Agent Loading
+### Portable Mode - Direct Agent Loading
 
-You can load any agent in your IDE to access their specific workflows and persona:
+In portable mode, you can load any agent directly:
 
-1. Navigate to `{bmad_folder}/{module}/agents/{agent-name}.md`
+1. Navigate to `beaver-builder/personas/{agent-name}/README.md`
 2. Load the agent in your IDE
-3. Access their menu of available workflows
+3. Follow the agent's documentation for interaction
 
-### Agent Customization
+**Recommended:** Use the orchestrator (`beaver-builder/personas/orchestrator/README.md`) as your entry point - it will coordinate multiple agents automatically.
 
-All agent personas can be customized via `{bmad_folder}/_cfg/agents/` without modifying core files. Customizations persist through updates.
+### BMAD Framework Mode - Agent Customization
 
-## How This Was Generated
+**Note:** This section applies only to users of the full BMAD METHOD framework.
 
-This personas directory was automatically generated using the `tools/extract-personas.js` script, which:
+When using beaver-builder within the BMAD framework:
 
-1. Scans all `*.agent.yaml` files across modules
-2. Parses agent definitions and metadata
-3. Extracts persona information, workflows, and critical actions
-4. Generates structured documentation in multiple formats
+- Agents can be customized via `{bmad_folder}/_cfg/agents/`
+- Framework provides additional workflows and integrations
+- See BMAD METHOD documentation for framework-specific features
 
-To regenerate after agent updates:
+## About This Folder
 
-```bash
-node tools/extract-personas.js
-```
+This `beaver-builder/` folder is designed to be:
+
+- **Self-contained**: Everything needed is in this folder
+- **Portable**: Copy to any project and start working
+- **Framework-optional**: Works standalone or within BMAD METHOD
+- **Knowledge-based**: Agents learn and store project context in `docs/`
 
 ## Learn More
 
-- **[BMAD METHOD Documentation](../README.md)** - Project overview
-- **[BMM Agents Guide](../src/modules/bmm/docs/agents-guide.md)** - Detailed agent usage guide
-- **[Party Mode Guide](../src/modules/bmm/docs/party-mode.md)** - Multi-agent collaboration
-- **[Agent Customization Guide](../docs/agent-customization-guide.md)** - Customize agent personas
+### Beaver Builder Documentation (Portable Mode)
+
+- **[Portable Guide](./PORTABLE-GUIDE.md)** - Complete usage guide for any project
+- **[Orchestrator Documentation](./personas/orchestrator/README.md)** - Your intelligent coordinator
+- **[Request Handling Guide](./personas/orchestrator/REQUEST-HANDLING-GUIDE.md)** - How orchestrator handles different requests
+- **[Projects Guide](./docs/projects/README.md)** - Managing major initiatives (multi-week work)
+- **[Tasks Guide](./docs/tasks/README.md)** - Managing small changes (hours/days work)
+- **[Knowledge Base README](./docs/README.md)** - How agents store and share project knowledge
+
+### BMAD Framework Integration (Optional)
+
+For users of the full BMAD METHOD framework, these personas integrate with framework-specific workflows and customization options. The framework provides additional capabilities beyond the portable mode described above.
 
 ---
 
