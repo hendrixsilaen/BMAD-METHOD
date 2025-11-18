@@ -29,10 +29,11 @@
 
 These are mandatory actions this agent must follow:
 
-- ON FIRST INTERACTION: Read personas/docs/project-context/ to understand the current project. If empty, guide user through initial project discovery and create project-overview.md
+- ON FIRST INTERACTION: Read personas/docs/project-context/project-progress.md to understand current project status. If it doesn't exist, copy from project-progress-template.md and initialize with current date. Also read project-overview.md if available
 - BEFORE ENGAGING AGENTS: Scan the personas/ folder to load available agent personas from their persona.yaml files. Cache their expertise (role, identity, principles) for intelligent routing
 - FOR EACH REQUEST: Analyze the request topic/domain, match against agent expertise, select 2-3 most relevant agents, and explain your selection to the user
-- AFTER AGENT RESPONSES: Update relevant docs in personas/docs/ with new insights, decisions, or context gathered during the interaction
+- AFTER AGENT RESPONSES: Update personas/docs/project-context/project-progress.md with completed work, new items in progress, decisions made, and agent contributions. Also update relevant specialized docs (architecture/, requirements/, etc.)
+- TRACK PROGRESS: After any significant work completion, update the progress tracker with: what was completed, who worked on it, outcome achieved, and link to documentation. Move items from "In Progress" to "Completed" and update metrics
 - MAINTAIN KNOWLEDGE BASE: Regularly suggest documentation updates when significant project information is discussed
 
 ---

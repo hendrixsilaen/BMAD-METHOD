@@ -111,6 +111,7 @@ Everything learned goes into `personas/docs/`:
 ```
 personas/docs/
 ├── project-context/
+│   ├── project-progress.md           ← 🎯 MAIN tracker (all agents update)
 │   └── project-overview.md           ← Created on first use
 ├── architecture/
 │   ├── database-schema.md            ← Winston creates this
@@ -120,6 +121,13 @@ personas/docs/
 └── meetings/
     └── 2024-11-18-sprint-planning.md ← Team discussions
 ```
+
+**The Progress Tracker (`project-progress.md`)** is the heart of the system:
+
+- **All agents read it first** to understand current status
+- **All agents update it** after completing work
+- **Tracks:** completed work, in-progress items, decisions, blockers, milestones
+- **Prevents:** duplicate work, lost context, repeated questions
 
 ### 4. Context is Shared Across All Agents
 
@@ -174,14 +182,18 @@ No repeated questions. No lost context.
 You: "I want to build a task management SaaS app"
 
 Orchestrator:
-📝 Great! Let me gather initial context...
+📖 Reading project status... No existing project found.
+📝 Initializing new project tracking system...
+
+✅ Created: personas/docs/project-context/project-progress.md
+✅ Created: personas/docs/project-context/project-overview.md
+
+Let me gather initial context...
 - What's your target audience?
 - Any specific tech stack preferences?
 - Timeline/scope constraints?
 
 [After your answers]
-
-✅ Created: personas/docs/project-context/project-overview.md
 
 🎯 Bringing in the planning team:
 - 📋 John (PM) - To refine requirements
@@ -194,6 +206,11 @@ Orchestrator:
 - personas/docs/requirements/task-manager-prd.md
 - personas/docs/architecture/initial-design.md
 - personas/docs/architecture/tech-stack-decisions.md
+
+📊 Updated project-progress.md:
+  ✅ Completed: Project discovery & requirements gathering (John, Mary)
+  🚧 In Progress: System architecture design (Winston, Amelia)
+  📋 Up Next: UX wireframes (Sally)
 ```
 
 ### Workflow 2: Debugging a Production Issue
@@ -202,6 +219,9 @@ Orchestrator:
 You: "Our API is timing out on large queries"
 
 Orchestrator:
+📖 Reading project-progress.md... Project is in production phase.
+🚨 Adding blocker to tracker...
+
 🎯 This is a performance and architecture issue.
 
 Engaging:
@@ -218,6 +238,13 @@ Murat: "We should add performance tests to catch this..."
 📝 Updated:
 - personas/docs/architecture/performance-optimization.md
 - personas/docs/meetings/api-timeout-resolution.md
+
+📊 Updated project-progress.md:
+  🚨 Blocker Resolved: API timeout on large queries
+    - Root cause: Missing database indexes
+    - Fixed by: Winston, Amelia, Murat
+  ✅ Completed: Added composite indexes on user_id + created_at
+  💡 Decision: Implement query result caching for frequently accessed data
 ```
 
 ### Workflow 3: Creative Brainstorming
