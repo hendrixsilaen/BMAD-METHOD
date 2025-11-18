@@ -1,0 +1,48 @@
+available_workflows:
+  - trigger: initialize
+    description: First-time project setup - discover project context and create initial documentation
+    workflow: Guided project discovery conversation
+    type: interactive
+    platform: both
+
+  - trigger: show-agents
+    description: List all available agent personas with their expertise
+    workflow: Scan personas/ folder and display agent capabilities
+    type: discovery
+    platform: both
+
+  - trigger: route
+    description: Analyze a request and recommend which agents to engage
+    workflow: Intelligent agent routing based on request analysis
+    type: routing
+    platform: both
+
+  - trigger: collaborate
+    description: Facilitate multi-agent discussion on a complex topic
+    workflow: Multi-agent collaboration with 3-5 agents
+    type: collaboration
+    platform: both
+
+  - trigger: knowledge-check
+    description: Review what's stored in the project knowledge base (personas/docs/)
+    workflow: Browse and summarize personas/docs/ contents
+    type: knowledge
+    platform: both
+
+  - trigger: document
+    description: Create or update documentation in personas/docs/
+    workflow: Structured document creation with appropriate template
+    type: documentation
+    platform: both
+
+  - trigger: export-setup
+    description: Guide user through copying personas/ to a new project
+    workflow: Step-by-step portability instructions
+    type: setup
+    platform: both
+
+  - trigger: project-status
+    description: Summarize current project state from knowledge base
+    workflow: Read and synthesize all project documentation
+    type: status
+    platform: both

@@ -2,20 +2,62 @@
 
 This directory contains all the AI agent personas from the BMAD METHOD project. Each persona represents a specialized expert agent with unique skills, communication styles, and workflows.
 
+## 🚀 Portable AI Expert Team
+
+**NEW:** This `personas/` folder is now **completely portable and self-contained**!
+
+Copy it to any project and get instant access to 20+ specialized AI agents coordinated by an intelligent orchestrator. No framework dependencies, no complex setup - just drop it in your project and start collaborating.
+
+**→ [Read the Portable Guide](./PORTABLE-GUIDE.md) to get started!**
+
+### Quick Start (Portable Mode)
+
+1. Copy `personas/` folder to your project
+2. Load `personas/orchestrator/README.md` in your IDE
+3. Say: _"Hi, I need help with my project"_
+4. Let the orchestrator engage the right agents for your needs
+
+### Quick Start (BMAD Framework Mode)
+
+If you're using the full BMAD METHOD framework:
+
+1. Run `npx bmad-method@alpha install`
+2. Load any agent from `{bmad_folder}/`
+3. Run `*workflow-init` to start
+
+---
+
 ## Overview
 
-The BMAD METHOD orchestrates **20 specialized AI agents** across multiple modules, each with distinct personalities and expertise. This personas directory provides a centralized reference for all agent definitions.
+The BMAD METHOD orchestrates **20+ specialized AI agents** across multiple modules, each with distinct personalities and expertise. This personas directory provides both a centralized reference for all agent definitions AND a portable team you can use in any project.
 
 ## Directory Structure
 
 ```
 personas/
-├── README.md (this file)
-├── {agent-name}/
-│   ├── README.md         # Full agent documentation
-│   ├── persona.yaml      # Structured persona data
-│   └── workflows.yaml    # Available workflows and capabilities
+├── README.md                # This file - overview of all agents
+├── PORTABLE-GUIDE.md       # Complete guide for using personas in any project
+├── orchestrator/           # 🎭 Your entry point for multi-agent coordination
+│   ├── README.md           # Orchestrator documentation
+│   ├── persona.yaml        # Orchestrator definition
+│   └── workflows.yaml      # Orchestrator capabilities
+├── docs/                   # 📚 Project knowledge base (grows over time)
+│   ├── project-context/    # Core project information
+│   ├── architecture/       # System design and decisions
+│   ├── requirements/       # Product specs and stories
+│   ├── research/           # Analysis and insights
+│   └── meetings/           # Decision records
+└── {agent-name}/           # 20+ specialized expert agents
+    ├── README.md           # Full agent documentation
+    ├── persona.yaml        # Structured persona data
+    └── workflows.yaml      # Available workflows and capabilities
 ```
+
+### What Each Component Does:
+
+- **orchestrator/**: Intelligent coordinator that selects and engages the right agents for each task
+- **docs/**: Project-specific knowledge that all agents can read and contribute to
+- **agent folders/**: Individual expert personas with specialized skills
 
 Each agent folder contains:
 
@@ -25,9 +67,18 @@ Each agent folder contains:
 
 ## Agents by Module
 
-### Core Module (1 agent)
+### 🎭 Orchestrator (START HERE!)
 
-- **[BMad Master](./bmad-master/)** 🧙 - Master orchestrator and workflow coordinator
+- **[Orchestrator](./orchestrator/)** 🎭 - **Portable multi-agent coordinator** (use this in any project!)
+  - Intelligently routes requests to relevant agents
+  - Maintains project knowledge base in `docs/`
+  - Facilitates multi-agent collaboration
+  - Works without any framework dependencies
+
+### Core Module (Original BMAD Agents)
+
+- **[BMad Master](./bmad-master/)** 🧙 - Master orchestrator and workflow coordinator (BMAD framework)
+- **[BMad Builder](./bmad-builder/)** 🧙 - Module Builder (Master BMad Module Agent Team Builder)
 
 ### BMM - BMad Method Module (9 agents)
 
@@ -51,12 +102,6 @@ Game development specialists:
 - **[Max](./max/)** 🎯 - Game Scrum Master
 - **[Link Freeman](./link-freeman/)** 🕹️ - Game Developer
 - **[Samus Shepard](./samus-shepard/)** 🎲 - Game Architect
-
-### BMB - BMad Builder Module (1 agent)
-
-Custom agent and workflow creation:
-
-- **[BMad Builder](./bmad-builder/)** 🧙 - Module Builder (Master BMad Module Agent Team Builder)
 
 ### CIS - Creative Intelligence Suite Module (5 agents)
 
