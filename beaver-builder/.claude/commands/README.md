@@ -20,6 +20,46 @@ Quick access commands for common beaver-builder workflows. These slash commands 
 
 ---
 
+## 🎬 Onboarding Commands
+
+### `/onboard-existing`
+
+**Analyze existing project** - Deep codebase analysis to create comprehensive project context. Orchestrates multiple agents to understand tech stack, architecture, code quality, and documentation.
+
+**Use when:** First time using beaver-builder in an existing project, need to build complete project knowledge base
+
+**What it does:**
+
+- Analyzes codebase structure and tech stack
+- Reviews existing documentation
+- Maps architecture patterns
+- Assesses code quality and test coverage
+- Creates project-overview.md and project-progress.md
+- Generates initial ADRs and documentation
+
+**Duration:** ~30-45 minutes for thorough analysis
+
+---
+
+### `/onboard-new`
+
+**Set up new project** - Structured discovery interview to gather requirements and make initial architectural decisions. Perfect for greenfield projects.
+
+**Use when:** Starting a brand new project from scratch, need to define vision and technical approach
+
+**What it does:**
+
+- Conducts comprehensive discovery interview
+- Gathers requirements and constraints
+- Makes tech stack recommendations
+- Creates initial architecture design
+- Sets up complete documentation structure
+- Generates roadmap and first user stories
+
+**Duration:** ~20-30 minutes for interview and setup
+
+---
+
 ## 📋 Project & Task Management
 
 ### `/create-project`
@@ -124,29 +164,37 @@ Quick access commands for common beaver-builder workflows. These slash commands 
 2. `/status` - Check what's happening
 3. `/agent` - Load specific expert
 
+### Onboarding (First Time Setup)
+
+4. `/onboard-existing` - Analyze existing project
+5. `/onboard-new` - Set up new project
+
 ### Project Organization
 
-4. `/create-project` - Major initiatives
-5. `/create-task` - Small changes
-6. `/list-projects` - Project overview
-7. `/list-tasks` - Task overview
+6. `/create-project` - Major initiatives
+7. `/create-task` - Small changes
+8. `/list-projects` - Project overview
+9. `/list-tasks` - Task overview
 
 ### Specialized Workflows
 
-8. `/brainstorm` - Creative ideation
-9. `/design` - Design solutions
-10. `/architecture` - System architecture
-11. `/implement` - Write code
-12. `/test` - Testing strategy
-13. `/document` - Documentation
-14. `/review` - Code review
-15. `/party-mode` - Multi-agent collaboration
+10. `/brainstorm` - Creative ideation
+11. `/design` - Design solutions
+12. `/architecture` - System architecture
+13. `/implement` - Write code
+14. `/test` - Testing strategy
+15. `/document` - Documentation
+16. `/review` - Code review
+17. `/party-mode` - Multi-agent collaboration
 
 ---
 
 ## 💡 Usage Tips
 
 ### When to Use Each Command
+
+**First Time Setup?**
+→ Use `/onboard-existing` for existing project or `/onboard-new` for new project
 
 **Starting Fresh?**
 → Use `/orchestrate` or `/status` to get oriented
@@ -168,7 +216,30 @@ Quick access commands for common beaver-builder workflows. These slash commands 
 
 ### Combining Commands
 
-**Typical Project Flow:**
+**New Project Setup Flow:**
+
+```
+1. /onboard-new → Discovery interview & setup
+2. /architecture → Design system architecture
+3. /create-project → Initialize first major initiative
+4. /implement → Build features
+5. /test → Add testing
+6. /review → Code review
+7. /document → Create docs
+8. /status → Check progress
+```
+
+**Existing Project Setup Flow:**
+
+```
+1. /onboard-existing → Deep codebase analysis
+2. /status → Review discovered context
+3. /architecture → Document & refine architecture
+4. /create-project → Plan next initiative
+5. [Continue with normal workflow]
+```
+
+**Typical Project Flow (after onboarding):**
 
 ```
 1. /create-project → Initialize project
@@ -202,21 +273,23 @@ Quick access commands for common beaver-builder workflows. These slash commands 
 
 ## 🎯 Command Selection Guide
 
-| Need              | Command           | Agent(s)                 |
-| ----------------- | ----------------- | ------------------------ |
-| General help      | `/orchestrate`    | Orchestrator             |
-| Project overview  | `/status`         | Orchestrator             |
-| Create initiative | `/create-project` | Orchestrator             |
-| Quick task        | `/create-task`    | Orchestrator             |
-| Creative ideas    | `/brainstorm`     | Carson                   |
-| System design     | `/architecture`   | Winston                  |
-| UX design         | `/design` → Sally | Sally                    |
-| Write code        | `/implement`      | Amelia                   |
-| Test strategy     | `/test`           | Murat                    |
-| Documentation     | `/document`       | Paige or Saif            |
-| Code review       | `/review`         | Amelia + Winston + Murat |
-| Complex problem   | `/party-mode`     | Multiple agents          |
-| Specific expert   | `/agent`          | Your choice              |
+| Need              | Command             | Agent(s)                 |
+| ----------------- | ------------------- | ------------------------ |
+| Setup existing    | `/onboard-existing` | Multi-agent              |
+| Setup new         | `/onboard-new`      | Orchestrator + Architect |
+| General help      | `/orchestrate`      | Orchestrator             |
+| Project overview  | `/status`           | Orchestrator             |
+| Create initiative | `/create-project`   | Orchestrator             |
+| Quick task        | `/create-task`      | Orchestrator             |
+| Creative ideas    | `/brainstorm`       | Carson                   |
+| System design     | `/architecture`     | Winston                  |
+| UX design         | `/design` → Sally   | Sally                    |
+| Write code        | `/implement`        | Amelia                   |
+| Test strategy     | `/test`             | Murat                    |
+| Documentation     | `/document`         | Paige or Saif            |
+| Code review       | `/review`           | Amelia + Winston + Murat |
+| Complex problem   | `/party-mode`       | Multiple agents          |
+| Specific expert   | `/agent`            | Your choice              |
 
 ---
 

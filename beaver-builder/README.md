@@ -13,15 +13,18 @@ Copy it to any project and get instant access to 20+ specialized AI agents coord
 ### Quick Start (Portable Mode)
 
 1. Copy `beaver-builder/` folder to your project
-2. Use **slash commands** for quick access:
+2. **First time setup?** Run onboarding:
+   - `/onboard-existing` - Deep analysis of existing project (~30-45 min)
+   - `/onboard-new` - Discovery interview for new project (~20-30 min)
+3. Use **slash commands** for quick access:
    - `/orchestrate` - Let the orchestrator help with any request
    - `/status` - Check project status
    - `/agent` - Load specific agent (21 available)
    - `/create-project` - Start new major initiative
    - `/create-task` - Create small task
-   - **[See all 15 commands](./.claude/commands/README.md)**
-3. Or load `beaver-builder/personas/orchestrator/README.md` directly
-4. Say: _"Hi, I need help with my project"_
+   - **[See all 17 commands](./.claude/commands/README.md)**
+4. Or load `beaver-builder/personas/orchestrator/README.md` directly
+5. Say: _"Hi, I need help with my project"_
 
 ### Quick Start (BMAD Framework Mode)
 
