@@ -1,56 +1,56 @@
 available_workflows:
   - trigger: workflow-status
     description: Check workflow status and get recommendations
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/workflow.yaml"
+    workflow: Review current project workflow state, identify completed and pending workflows, provide actionable recommendations for next steps
     type: workflow
     platform: both
   - trigger: framework
     description: Initialize production-ready test framework architecture
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/framework/workflow.yaml"
-    type: workflow
+    workflow: Design and implement comprehensive test framework including test infrastructure, runners, reporting, CI/CD integration, coverage tooling, and best practices documentation
+    type: implementation
     platform: both
   - trigger: atdd
     description: Generate E2E tests first, before starting implementation
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/atdd/workflow.yaml"
-    type: workflow
+    workflow: Apply Acceptance Test-Driven Development by creating comprehensive end-to-end tests from acceptance criteria before implementation begins, defining expected behavior
+    type: testing
     platform: both
   - trigger: automate
     description: Generate comprehensive test automation
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/automate/workflow.yaml"
-    type: workflow
+    workflow: Create automated test suite covering unit tests, integration tests, E2E tests, with proper assertions, test data management, and CI/CD integration
+    type: testing
     platform: both
   - trigger: test-design
     description: Create comprehensive test scenarios
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/test-design/workflow.yaml"
-    type: workflow
+    workflow: Design test scenarios covering happy paths, edge cases, error conditions, security vulnerabilities, performance bottlenecks, using techniques like equivalence partitioning and boundary value analysis
+    type: design
     platform: both
   - trigger: trace
     description: Map requirements to tests (Phase 1) and make quality gate decision (Phase 2)
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/trace/workflow.yaml"
-    type: workflow
+    workflow: Create traceability matrix mapping requirements to test cases, verify coverage completeness, assess quality metrics, determine if quality gates are met for release
+    type: validation
     platform: both
   - trigger: nfr-assess
     description: Validate non-functional requirements
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/nfr-assess/workflow.yaml"
-    type: workflow
+    workflow: Evaluate system against non-functional requirements including performance, scalability, security, reliability, maintainability, usability, and accessibility
+    type: validation
     platform: both
   - trigger: ci
     description: Scaffold CI/CD quality pipeline
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/ci/workflow.yaml"
-    type: workflow
+    workflow: Set up continuous integration/deployment pipeline with automated testing, code quality checks, security scanning, build automation, and deployment orchestration
+    type: implementation
     platform: both
   - trigger: test-review
     description: Review test quality using comprehensive knowledge base and best practices
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/test-review/workflow.yaml"
-    type: workflow
+    workflow: Conduct comprehensive test review evaluating test coverage, assertion quality, test maintainability, performance, reliability, and adherence to testing best practices
+    type: validation
     platform: both
   - trigger: party-mode
-    description: Bring the whole team in to chat with other expert agents from the party
-    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
-    type: workflow
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
     platform: both
   - trigger: advanced-elicitation
-    description: Advanced elicitation techniques to challenge the LLM to get better results
-    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
-    type: task
+    description: Deep requirements gathering through structured questioning
+    workflow: Use systematic questioning techniques to elicit comprehensive requirements, constraints, and context from user
+    type: discovery
     platform: web-only

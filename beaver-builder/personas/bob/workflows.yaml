@@ -1,66 +1,66 @@
 available_workflows:
   - trigger: workflow-status
     description: Check workflow status and get recommendations
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/workflow.yaml"
+    workflow: Review current project workflow state, identify completed and pending workflows, provide actionable recommendations for next steps
     type: workflow
     platform: both
   - trigger: sprint-planning
     description: Generate or update sprint-status.yaml from epic files
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/sprint-planning/workflow.yaml"
-    type: workflow
+    workflow: Facilitate sprint planning by analyzing epics, creating sprint backlog, estimating story points, identifying dependencies, setting sprint goals, and generating sprint status tracking
+    type: planning
     platform: both
   - trigger: create-epic-tech-context
     description: (Optional) Use the PRD and Architecture to create a Epic-Tech-Spec for a specific epic
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/epic-tech-context/workflow.yaml"
-    type: workflow
+    workflow: Develop epic-level technical context document synthesizing relevant PRD sections, architecture decisions, technical constraints, and implementation approach for specific epic
+    type: design
     platform: both
   - trigger: validate-epic-tech-context
     description: (Optional) Validate latest Tech Spec against checklist
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/epic-tech-context/workflow.yaml"
+    workflow: Review epic technical context for completeness, technical accuracy, alignment with architecture and PRD, feasibility, and adherence to standards
     type: validation
     platform: both
   - trigger: create-story
     description: Create a Draft Story
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/create-story/workflow.yaml"
-    type: workflow
+    workflow: Develop user story with clear description, acceptance criteria, technical considerations, dependencies, and estimation following story writing best practices
+    type: planning
     platform: both
   - trigger: validate-create-story
     description: (Optional) Validate Story Draft with Independent Review
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/create-story/workflow.yaml"
+    workflow: Review story for clarity, completeness, testability, appropriate scope, well-defined acceptance criteria, and adherence to INVEST principles
     type: validation
     platform: both
   - trigger: create-story-context
-    description: (Optional) Assemble dynamic Story Context (XML) from latest docs and code and mark story ready for dev
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/story-context/workflow.yaml"
+    description: (Optional) Assemble comprehensive story context from latest docs and code to prepare for development
+    workflow: Generate comprehensive story context document gathering relevant code, documentation, architecture decisions, dependencies, and constraints to prepare story for development
     type: workflow
     platform: both
   - trigger: validate-create-story-context
-    description: (Optional) Validate latest Story Context XML against checklist
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/story-context/workflow.yaml"
+    description: (Optional) Validate story context documentation against completeness checklist
+    workflow: Review story context for completeness, accuracy, relevance, proper structure, and inclusion of all necessary information for implementation
     type: validation
     platform: both
   - trigger: story-ready-for-dev
-    description: (Optional) Mark drafted story ready for dev without generating Story Context
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/story-ready/workflow.yaml"
+    description: (Optional) Mark drafted story ready for dev without generating detailed context
+    workflow: Verify story meets readiness criteria (clear acceptance criteria, feasibility assessed, dependencies identified) and mark as ready for development
     type: workflow
     platform: both
   - trigger: epic-retrospective
     description: (Optional) Facilitate team retrospective after an epic is completed
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/retrospective/workflow.yaml"
-    type: workflow
+    workflow: Conduct retrospective session reviewing what went well, what could be improved, action items, and lessons learned from completed epic
+    type: collaboration
     platform: both
   - trigger: correct-course
     description: (Optional) Execute correct-course task
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/correct-course/workflow.yaml"
-    type: workflow
+    workflow: Analyze project trajectory, identify deviations from plan, assess impacts, recommend corrective actions to realign with project goals
+    type: analysis
     platform: both
   - trigger: party-mode
-    description: Bring the whole team in to chat with other expert agents from the party
-    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
-    type: workflow
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
     platform: both
   - trigger: advanced-elicitation
-    description: Advanced elicitation techniques to challenge the LLM to get better results
-    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
-    type: task
+    description: Deep requirements gathering through structured questioning
+    workflow: Use systematic questioning techniques to elicit comprehensive requirements, constraints, and context from user
+    type: discovery
     platform: web-only

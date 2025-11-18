@@ -1,26 +1,61 @@
 available_workflows:
-  - trigger: flowchart
-    description: Create flowchart for processes, pipelines, or logic flows
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/frame-expert/create-flowchart/workflow.yaml"
-    type: workflow
-    platform: both
-  - trigger: diagram
-    description: Create system architecture or general technical diagram
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/frame-expert/create-diagram/workflow.yaml"
-    type: workflow
-    platform: both
-  - trigger: dataflow
-    description: Create data flow diagram
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/frame-expert/create-dataflow/workflow.yaml"
-    type: workflow
-    platform: both
-  - trigger: wireframe
-    description: Create website or app wireframe
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/frame-expert/create-wireframe/workflow.yaml"
-    type: workflow
+  - trigger: document-project
+    description: Create comprehensive project documentation with visual diagrams
+    workflow: Analyze project structure and codebase, create architecture diagrams using Mermaid, document components and relationships, generate visual representations of data flows and system interactions
+    type: documentation
     platform: both
   - trigger: party-mode
-    description: Bring the whole team in to chat with other expert agents from the party
-    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
-    type: workflow
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
+    platform: both
+  - trigger: advanced-elicitation
+    description: Deep requirements gathering through structured questioning
+    workflow: Use systematic questioning techniques with visual aids like mind maps and concept diagrams to elicit comprehensive requirements, constraints, and context from user
+    type: discovery
+    platform: both
+  - trigger: create-api-docs
+    description: Generate comprehensive API documentation with diagrams
+    workflow: Analyze API structure, create OpenAPI/Swagger documentation, generate sequence diagrams for API flows using Mermaid, document endpoints with examples
+    type: documentation
+    platform: both
+  - trigger: create-architecture-docs
+    description: Create system architecture documentation with visual diagrams
+    workflow: Analyze system architecture, create C4 diagrams (context, container, component), generate deployment diagrams, document architectural decisions and patterns
+    type: documentation
+    platform: both
+  - trigger: create-user-guide
+    description: Generate user-friendly documentation with visual aids
+    workflow: Create step-by-step user guides with flowcharts and diagrams, include visual workflow representations using Mermaid for clarity
+    type: documentation
+    platform: both
+  - trigger: audit-docs
+    description: Review and improve existing documentation quality
+    workflow: Analyze documentation completeness, check diagram accuracy, verify examples work, suggest improvements for clarity and visual representation
+    type: validation
+    platform: both
+  - trigger: generate-diagram
+    description: Create diagrams from text descriptions using Mermaid
+    workflow: Parse text description, select appropriate diagram type (sequence, class, component, flowchart, ER, state), generate Mermaid diagram code
+    type: design
+    platform: both
+  - trigger: validate-doc
+    description: Validate documentation for accuracy and completeness
+    workflow: Check documentation against codebase, verify examples compile and run, validate diagram accuracy, ensure all required sections present
+    type: validation
+    platform: both
+  - trigger: improve-readme
+    description: Enhance README files with better structure and visuals
+    workflow: Analyze current README, add badges, create visual architecture diagram, improve formatting, add usage examples with code blocks
+    type: documentation
+    platform: both
+  - trigger: explain-concept
+    description: Explain technical concepts with visual aids
+    workflow: Break down complex concept, create explanatory diagrams (flowcharts, mind maps, sequence diagrams), provide visual examples and analogies
+    type: documentation
+    platform: both
+  - trigger: standards-guide
+    description: Create documentation standards guide for the project
+    workflow: Define documentation structure templates, create diagramming standards, establish naming conventions, provide examples of well-documented components
+    type: reference
     platform: both

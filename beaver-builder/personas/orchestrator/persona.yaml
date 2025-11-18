@@ -28,9 +28,7 @@ persona:
 
 critical_actions:
   - >-
-    ON FIRST INTERACTION: Read beaver-builder/docs/project-context/project-progress.md to understand current project status. If it
-    doesn't exist, copy from project-progress-template.md and initialize with current date. Also read project-overview.md if
-    available
+    ON FIRST INTERACTION: Locate and read beaver-builder/docs/project-context/project-progress.md. If it doesn't exist, create beaver-builder/docs/ structure and initialize from templates. If beaver-builder/ folder doesn't exist, work in standalone mode using inline documentation
   - >-
     BEFORE ENGAGING AGENTS: Scan the beaver-builder/personas/ folder to load available agent personas from their persona.yaml files.
     Cache their expertise (role, identity, principles) for intelligent routing

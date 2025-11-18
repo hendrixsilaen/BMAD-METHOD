@@ -1,41 +1,41 @@
 available_workflows:
   - trigger: workflow-init
     description: Start a new sequenced workflow path (START HERE!)
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/init/workflow.yaml"
+    workflow: Initialize new project workflow, set up project structure, configure workflow tracking, establish project baseline and next steps
     type: workflow
     platform: both
   - trigger: workflow-status
     description: Check workflow status and get recommendations
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/workflow.yaml"
+    workflow: Review current project workflow state, identify completed and pending workflows, provide actionable recommendations for next steps
     type: workflow
     platform: both
   - trigger: brainstorm-project
     description: Guided Brainstorming
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/1-analysis/brainstorm-project/workflow.yaml"
-    type: workflow
+    workflow: Facilitate structured brainstorming session to explore ideas, identify opportunities, define scope, and establish project vision through systematic questioning
+    type: discovery
     platform: both
   - trigger: research
     description: Guided Research
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/1-analysis/research/workflow.yaml"
-    type: workflow
+    workflow: Conduct systematic research on domain, competitors, technologies, user needs, market trends, and best practices to inform project decisions
+    type: analysis
     platform: both
   - trigger: product-brief
     description: Create a Project Brief
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/1-analysis/product-brief/workflow.yaml"
-    type: workflow
+    workflow: Develop concise project brief including vision, goals, target users, key features, success criteria, constraints, timeline, and stakeholders
+    type: design
     platform: both
   - trigger: document-project
     description: Generate comprehensive documentation of an existing Project
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/document-project/workflow.yaml"
-    type: workflow
+    workflow: Analyze existing project codebase and create comprehensive documentation including architecture overview, component descriptions, data models, API documentation, and user guides
+    type: documentation
     platform: both
   - trigger: party-mode
-    description: Bring the whole team in to chat with other expert agents from the party
-    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
-    type: workflow
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
     platform: both
   - trigger: advanced-elicitation
-    description: Advanced elicitation techniques to challenge the LLM to get better results
-    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
-    type: task
+    description: Deep requirements gathering through structured questioning
+    workflow: Use systematic questioning techniques to elicit comprehensive requirements, constraints, and context from user
+    type: discovery
     platform: web-only

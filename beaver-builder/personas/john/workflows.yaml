@@ -1,51 +1,51 @@
 available_workflows:
   - trigger: workflow-init
     description: Start a new sequenced workflow path
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/init/workflow.yaml"
+    workflow: Initialize new project workflow, set up project structure, configure workflow tracking, establish project baseline and next steps
     type: workflow
     platform: ide-only
   - trigger: workflow-status
     description: Check workflow status and get recommendations
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/workflow.yaml"
+    workflow: Review current project workflow state, identify completed and pending workflows, provide actionable recommendations for next steps
     type: workflow
     platform: both
   - trigger: create-prd
     description: Create Product Requirements Document (PRD)
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/2-plan-workflows/prd/workflow.yaml"
-    type: workflow
+    workflow: Develop comprehensive PRD including problem statement, goals, user stories, functional requirements, non-functional requirements, success metrics, constraints, and acceptance criteria
+    type: design
     platform: both
   - trigger: create-epics-and-stories
     description: Break PRD requirements into implementable epics and stories
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/2-plan-workflows/create-epics-and-stories/workflow.yaml"
-    type: workflow
+    workflow: Decompose PRD requirements into logical epics and user stories with clear scope, acceptance criteria, technical considerations, and dependencies
+    type: planning
     platform: both
   - trigger: validate-prd
     description: Validate PRD + Epics + Stories completeness and quality
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/2-plan-workflows/prd/workflow.yaml"
+    workflow: Review PRD for clarity, completeness, feasibility, testability, and alignment with business goals; validate epic and story breakdown appropriateness
     type: validation
     platform: both
   - trigger: tech-spec
     description: Create Tech Spec (Simple work efforts, no PRD or Architecture docs)
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/2-plan-workflows/tech-spec/workflow.yaml"
-    type: workflow
+    workflow: Create lightweight technical specification for simple features including overview, technical approach, implementation details, testing strategy, and risks
+    type: design
     platform: both
   - trigger: validate-tech-spec
     description: Validate Technical Specification Document
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/2-plan-workflows/tech-spec/workflow.yaml"
+    workflow: Review tech spec for technical soundness, completeness, clarity, feasibility, and alignment with project standards
     type: validation
     platform: both
   - trigger: correct-course
     description: Course Correction Analysis
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/correct-course/workflow.yaml"
-    type: workflow
+    workflow: Analyze project trajectory, identify deviations from plan, assess impacts, recommend corrective actions to realign with project goals
+    type: analysis
     platform: ide-only
   - trigger: party-mode
-    description: Bring the whole team in to chat with other expert agents from the party
-    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
-    type: workflow
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
     platform: both
   - trigger: advanced-elicitation
-    description: Advanced elicitation techniques to challenge the LLM to get better results
-    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
-    type: task
+    description: Deep requirements gathering through structured questioning
+    workflow: Use systematic questioning techniques to elicit comprehensive requirements, constraints, and context from user
+    type: discovery
     platform: web-only

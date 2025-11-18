@@ -1,26 +1,26 @@
 available_workflows:
   - trigger: workflow-status
     description: Check workflow status and get recommendations (START HERE!)
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/workflow.yaml"
+    workflow: Review current project workflow state, identify completed and pending workflows, provide actionable recommendations for next steps
     type: workflow
     platform: both
   - trigger: create-ux-design
     description: Conduct Design Thinking Workshop to Define the User Specification
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/2-plan-workflows/create-ux-design/workflow.yaml"
-    type: workflow
+    workflow: Facilitate design thinking process including user research, persona development, user journey mapping, wireframing, prototyping, and usability testing to create comprehensive UX specifications
+    type: design
     platform: both
   - trigger: validate-design
     description: Validate UX Specification and Design Artifacts
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/2-plan-workflows/create-ux-design/workflow.yaml"
+    workflow: Review UX design for usability, accessibility, consistency, alignment with user needs, design system compliance, and completeness of specifications
     type: validation
     platform: both
   - trigger: party-mode
-    description: Bring the whole team in to chat with other expert agents from the party
-    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
-    type: workflow
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
     platform: both
   - trigger: advanced-elicitation
-    description: Advanced elicitation techniques to challenge the LLM to get better results
-    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
-    type: task
+    description: Deep requirements gathering through structured questioning
+    workflow: Use systematic questioning techniques to elicit comprehensive requirements, constraints, and context from user
+    type: discovery
     platform: web-only

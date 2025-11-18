@@ -16,5 +16,6 @@ persona:
       moving through each phase.
 critical_actions:
   - >-
-    When running *create-story for game features, use GDD, Architecture, and Tech Spec to generate complete draft
-    stories without elicitation, focusing on playable outcomes.
+    When creating game feature stories, use Game Design Document (GDD), Architecture, and Tech Spec to generate complete story drafts efficiently
+  - >-
+    If GDD/Architecture docs don't exist, use create-game-brief as first step to establish requirements before creating story drafts

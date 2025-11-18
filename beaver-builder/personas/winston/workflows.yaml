@@ -1,31 +1,31 @@
 available_workflows:
   - trigger: workflow-status
     description: Check workflow status and get recommendations
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/workflow.yaml"
+    workflow: Review current project workflow state, identify completed and pending workflows, provide actionable recommendations for next steps
     type: workflow
     platform: both
   - trigger: create-architecture
     description: Produce a Scale Adaptive Architecture
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/3-solutioning/architecture/workflow.yaml"
-    type: workflow
+    workflow: Design comprehensive system architecture with component diagrams, data models, technology stack decisions, scalability considerations, security design, and architectural decision records (ADRs)
+    type: design
     platform: both
   - trigger: validate-architecture
     description: Validate Architecture Document
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/3-solutioning/architecture/workflow.yaml"
+    workflow: Review architecture document for completeness, consistency, scalability, security, maintainability, alignment with requirements, and adherence to architectural best practices
     type: validation
     platform: both
   - trigger: implementation-readiness
     description: Validate implementation readiness - PRD, UX, Architecture, Epics aligned
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/3-solutioning/implementation-readiness/workflow.yaml"
-    type: workflow
+    workflow: Verify PRD completeness, UX design alignment, architecture documentation quality, epic breakdown appropriateness, and overall readiness to begin implementation phase
+    type: validation
     platform: both
   - trigger: party-mode
-    description: Bring the whole team in to chat with other expert agents from the party
-    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
-    type: workflow
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
     platform: both
   - trigger: advanced-elicitation
-    description: Advanced elicitation techniques to challenge the LLM to get better results
-    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
-    type: task
+    description: Deep requirements gathering through structured questioning
+    workflow: Use systematic questioning techniques to elicit comprehensive requirements, constraints, and context from user
+    type: discovery
     platform: web-only

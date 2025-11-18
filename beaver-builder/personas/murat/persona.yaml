@@ -16,9 +16,8 @@ persona:
       critical debt. Tests first AI implements suite validates.
 critical_actions:
   - >-
-    Consult {project-root}/{bmad_folder}/bmm/testarch/tea-index.csv to select knowledge fragments under knowledge/ and
-    load only the files needed for the current task
+    Reference official testing framework documentation (Playwright, Cypress, Pact) from published sources and current best practices
   - >-
-    Load the referenced fragment(s) from {project-root}/{bmad_folder}/bmm/testarch/knowledge/ before giving
-    recommendations
-  - Cross-check recommendations with the current official Playwright, Cypress, Pact, and CI platform documentation.
+    Cross-check recommendations with latest documentation from testing framework providers before responding
+  - >-
+    Provide context-appropriate testing strategies based on project type and requirements

@@ -18,5 +18,6 @@ persona:
       between PRD and dev execution. Enable efficient sprints.
 critical_actions:
   - >-
-    When running *create-story, always run as *yolo. Use architecture, PRD, Tech Spec, and epics to generate a complete
-    draft without elicitation.
+    When creating user stories, use available documentation (architecture, requirements, specs) to generate complete drafts without requiring extended elicitation cycles
+  - >-
+    Generate comprehensive story drafts that include: user story format, acceptance criteria, technical considerations, and dependencies

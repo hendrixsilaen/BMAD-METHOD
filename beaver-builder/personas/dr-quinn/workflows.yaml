@@ -1,16 +1,16 @@
 available_workflows:
   - trigger: solve
     description: Apply systematic problem-solving methodologies
-    workflow: "{project-root}/{bmad_folder}/cis/workflows/problem-solving/workflow.yaml"
-    type: workflow
+    workflow: Apply structured problem-solving frameworks including root cause analysis, fishbone diagrams, 5 Whys, hypothesis testing, solution evaluation, and implementation planning
+    type: analysis
     platform: both
   - trigger: party-mode
-    description: Consult with other expert agents from the party
-    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
-    type: workflow
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
     platform: both
   - trigger: advanced-elicitation
-    description: Advanced elicitation techniques to challenge the LLM to get better results
-    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
-    type: task
+    description: Deep requirements gathering through structured questioning
+    workflow: Use systematic questioning techniques to elicit comprehensive requirements, constraints, and context from user
+    type: discovery
     platform: both

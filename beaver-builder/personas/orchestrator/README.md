@@ -33,7 +33,7 @@
 
 These are mandatory actions this agent must follow:
 
-- **ON FIRST INTERACTION:** Read beaver-builder/docs/project-context/project-progress.md to understand current project status. If it doesn't exist, copy from project-progress-template.md and initialize with current date. Also read project-overview.md if available
+- **ON FIRST INTERACTION:** Locate and read beaver-builder/docs/project-context/project-progress.md. If it doesn't exist, create beaver-builder/docs/ structure and initialize from templates. If beaver-builder/ folder doesn't exist, work in standalone mode using inline documentation
 
 - **BEFORE ENGAGING AGENTS:** Scan the beaver-builder/personas/ folder to load available agent personas from their persona.yaml files. Cache their expertise (role, identity, principles) for intelligent routing
 
@@ -196,16 +196,44 @@ Engaging all four agents...
 
 ---
 
-## Portability Features
+## Portable Mode Support
 
-### Works Anywhere
+**Portable:** ✅ Yes - This persona works standalone without framework dependencies
+**External Dependencies:** None
+**Required Files:** None
 
-- No framework dependencies
-- Reads directly from persona.yaml files
-- Self-contained in beaver-builder/ folder
-- Works in any IDE or AI assistant
+### How to Use in Portable Mode
 
-### Project-Agnostic
+1. **Copy beaver-builder folder** to your project
+2. **Load this persona** by reading this README.md file in your IDE
+3. **Start conversation** with context about your needs
+4. **Workflows available** without framework installation:
+   - All workflows listed above work in portable mode
+   - No external configuration required
+   - Results stored in beaver-builder/docs/ if available
+
+### Portable vs Framework Mode
+
+**Portable Mode (Standalone):**
+
+- Works immediately without installation
+- Uses inline workflow descriptions
+- Stores outputs in local beaver-builder/docs/ folder
+- No framework-specific features
+
+**Framework Mode (Optional):**
+
+- Integrates with BMAD METHOD framework
+- Access to centralized workflow library
+- Framework-level customization options
+- Additional collaboration features
+
+### Prerequisites
+
+- **None** - This persona is fully self-contained
+- Optional: beaver-builder/docs/ folder structure for knowledge persistence
+
+### Project-Agnostic Capabilities
 
 - Software development
 - Creative projects
@@ -213,13 +241,6 @@ Engaging all four agents...
 - Research and analysis
 - Game development
 - Any domain where expert collaboration helps
-
-### Easy Setup
-
-1. Copy `beaver-builder/` folder to your project
-2. Load orchestrator persona
-3. Start asking questions
-4. Agents learn and adapt to your project
 
 ---
 

@@ -1,21 +1,31 @@
 available_workflows:
   - trigger: workflow-status
     description: Check workflow status and get recommendations
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/workflow.yaml"
+    workflow: Review current project workflow state, identify completed and pending workflows, provide actionable recommendations for next steps
     type: workflow
     platform: both
   - trigger: develop-story
     description: Execute Dev Story workflow, implementing tasks and tests, or performing updates to the story
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/dev-story/workflow.yaml"
-    type: workflow
+    workflow: Implement feature based on story requirements and acceptance criteria, write comprehensive tests (unit, integration, E2E), verify all acceptance criteria met, update documentation
+    type: implementation
     platform: both
   - trigger: story-done
     description: Mark story done after DoD complete
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/story-done/workflow.yaml"
+    workflow: Verify Definition of Done checklist complete, ensure all tests passing, code reviewed and merged, documentation updated, mark story as completed
     type: workflow
     platform: both
   - trigger: code-review
     description: Perform a thorough clean context QA code review on a story flagged Ready for Review
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/code-review/workflow.yaml"
-    type: workflow
+    workflow: Execute comprehensive code review covering architecture alignment, code quality, test coverage, security, performance, maintainability, and documentation completeness
+    type: validation
     platform: both
+  - trigger: party-mode
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
+    platform: both
+  - trigger: advanced-elicitation
+    description: Deep requirements gathering through structured questioning
+    workflow: Use systematic questioning techniques to elicit comprehensive requirements, constraints, and context from user
+    type: discovery
+    platform: web-only

@@ -1,31 +1,31 @@
 available_workflows:
   - trigger: brainstorm-game
     description: 1. Guide me through Game Brainstorming
-    workflow: "{project-root}/{bmad_folder}/bmgd/workflows/1-preproduction/brainstorm-game/workflow.yaml"
-    type: workflow
+    workflow: Facilitate structured game brainstorming session exploring game concepts, mechanics, genres, target audience, unique selling points, and market positioning
+    type: discovery
     platform: both
   - trigger: create-game-brief
     description: 3. Create Game Brief
-    workflow: "{project-root}/{bmad_folder}/bmgd/workflows/1-preproduction/game-brief/workflow.yaml"
-    type: workflow
+    workflow: Develop concise game brief including game vision, core mechanics, target platform, audience, art style, key features, success criteria, and development scope
+    type: design
     platform: both
   - trigger: create-gdd
     description: 4. Create Game Design Document (GDD)
-    workflow: "{project-root}/{bmad_folder}/bmgd/workflows/2-design/gdd/workflow.yaml"
-    type: workflow
+    workflow: Create comprehensive Game Design Document including gameplay mechanics, level design, progression systems, UI/UX specifications, narrative elements, technical requirements, and game balance considerations
+    type: design
     platform: both
   - trigger: narrative
     description: 5. Create Narrative Design Document (story-driven games)
-    workflow: "{project-root}/{bmad_folder}/bmgd/workflows/2-design/narrative/workflow.yaml"
-    type: workflow
+    workflow: Develop narrative design document including story overview, characters, world-building, dialogue systems, narrative structure, branching paths, and emotional beats for story-driven games
+    type: design
     platform: both
   - trigger: party-mode
-    description: Consult with other expert agents from the party
-    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
-    type: workflow
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
     platform: both
   - trigger: advanced-elicitation
-    description: Advanced elicitation techniques to challenge the LLM to get better results
-    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
-    type: task
+    description: Deep requirements gathering through structured questioning
+    workflow: Use systematic questioning techniques to elicit comprehensive requirements, constraints, and context from user
+    type: discovery
     platform: both

@@ -1,16 +1,18 @@
+# BMAD Framework Mode Only - This persona requires full BMAD framework access
+# These workflows are designed for framework development and management tasks
 available_workflows:
   - trigger: list-tasks
     description: List Available Tasks
-    workflow: ""
-    type: unknown
+    workflow: Display comprehensive list of all available BMAD framework tasks with descriptions, categories, and usage guidelines
+    type: reference
     platform: both
   - trigger: list-workflows
     description: List Workflows
-    workflow: ""
-    type: unknown
+    workflow: Display comprehensive list of all available BMAD framework workflows organized by category, showing triggers, descriptions, and prerequisites
+    type: reference
     platform: both
   - trigger: party-mode
-    description: Group chat with all agents
-    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
-    type: workflow
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
     platform: both

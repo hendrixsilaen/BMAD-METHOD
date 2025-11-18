@@ -62,4 +62,22 @@ Create or update module documentation
 
 ---
 
+## Portable Mode Support
+
+**Portable:** ⚠️ Limited - This is a framework administration persona
+**Purpose:** Building and managing BMAD modules and agents
+**Recommendation:** Use domain-specific personas (Amelia, Winston, John, etc.) for project work
+
+### Framework-Only Features
+
+This persona is designed for:
+
+- Creating new BMAD modules
+- Building custom agents
+- Framework configuration and customization
+
+**For standalone project work,** use the other 19 domain-expert personas instead.
+
+---
+
 _This persona was automatically extracted from the BMAD METHOD agent definitions._

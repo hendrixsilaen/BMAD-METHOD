@@ -24,7 +24,9 @@
 
 These are mandatory actions this agent must follow:
 
-- CRITICAL: Load COMPLETE file {project-root}/{bmad_folder}/bmm/workflows/techdoc/documentation-standards.md into permanent memory and follow ALL rules within
+- CRITICAL: Follow CommonMark, DITA, and OpenAPI standards for all technical documentation
+- Ensure consistency with industry-standard documentation practices including clear structure, proper formatting, and accessibility
+- If project has documentation-standards.md, load and follow those rules; otherwise apply standard best practices
 
 ---
 
@@ -79,6 +81,47 @@ Bring the whole team in to chat with other expert agents from the party
 ### `*advanced-elicitation` _(Web only)_
 
 Advanced elicitation techniques to challenge the LLM to get better results
+
+---
+
+## Portable Mode Support
+
+**Portable:** ✅ Yes - This persona works standalone without framework dependencies
+**External Dependencies:** None
+**Required Files:** None
+
+### How to Use in Portable Mode
+
+1. **Copy beaver-builder folder** to your project
+2. **Load this persona** by reading this README.md file in your IDE
+3. **Start conversation** with context about your needs
+4. **Workflows available** without framework installation:
+   - All workflows listed above work in portable mode
+   - No external configuration required
+   - Results stored in beaver-builder/docs/ if available
+
+### Portable vs Framework Mode
+
+**Portable Mode (Standalone):**
+
+- Works immediately without installation
+- Uses inline workflow descriptions
+- Stores outputs in local beaver-builder/docs/ folder
+- No framework-specific features
+
+**Framework Mode (Optional):**
+
+- Integrates with BMAD METHOD framework
+- Access to centralized workflow library
+- Framework-level customization options
+- Additional collaboration features
+
+### Prerequisites
+
+- **None** - This persona is fully self-contained
+- **Optional:** documentation-standards.md in project root
+- **Fallback:** Uses CommonMark, DITA, and OpenAPI industry standards
+- Optional: beaver-builder/docs/ folder structure for knowledge persistence
 
 ---
 

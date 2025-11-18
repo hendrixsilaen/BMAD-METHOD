@@ -1,46 +1,48 @@
+# BMAD Framework Mode Only - This persona requires full BMAD framework access
+# These workflows are designed for building and maintaining BMAD framework components
 available_workflows:
   - trigger: audit-workflow
     description: Audit existing workflows for BMAD Core compliance and best practices
-    workflow: "{project-root}/{bmad_folder}/bmb/workflows/audit-workflow/workflow.yaml"
-    type: workflow
+    workflow: Analyze workflow structure, validate YAML syntax, check compliance with BMAD standards, assess documentation quality, identify improvement opportunities
+    type: validation
     platform: both
   - trigger: convert
     description: Convert v4 or any other style task agent or template to a workflow
-    workflow: "{project-root}/{bmad_folder}/bmb/workflows/convert-legacy/workflow.yaml"
-    type: workflow
+    workflow: Analyze legacy agent or template structure, map to BMAD workflow format, preserve functionality, update to current standards, validate conversion
+    type: migration
     platform: both
   - trigger: create-agent
     description: Create a new BMAD Core compliant agent
-    workflow: "{project-root}/{bmad_folder}/bmb/workflows/create-agent/workflow.yaml"
-    type: workflow
+    workflow: Design agent persona and capabilities, define workflows and tasks, create configuration files, write documentation, validate against BMAD standards
+    type: development
     platform: both
   - trigger: create-module
     description: Create a complete BMAD compatible module (custom agents and workflows)
-    workflow: "{project-root}/{bmad_folder}/bmb/workflows/create-module/workflow.yaml"
-    type: workflow
+    workflow: Design module structure, create custom agents, define workflows, implement tasks, write comprehensive documentation, validate module integration
+    type: development
     platform: both
   - trigger: create-workflow
     description: Create a new BMAD Core workflow with proper structure
-    workflow: "{project-root}/{bmad_folder}/bmb/workflows/create-workflow/workflow.yaml"
-    type: workflow
+    workflow: Define workflow purpose and steps, create YAML configuration, implement workflow logic, add validation checkpoints, document usage and prerequisites
+    type: development
     platform: both
   - trigger: edit-agent
     description: Edit existing agents while following best practices
-    workflow: "{project-root}/{bmad_folder}/bmb/workflows/edit-agent/workflow.yaml"
-    type: workflow
+    workflow: Review current agent configuration, make requested modifications, ensure BMAD compliance, update documentation, validate changes
+    type: maintenance
     platform: both
   - trigger: edit-module
     description: Edit existing modules (structure, agents, workflows, documentation)
-    workflow: "{project-root}/{bmad_folder}/bmb/workflows/edit-module/workflow.yaml"
-    type: workflow
+    workflow: Analyze module structure, implement requested changes to agents/workflows/docs, maintain consistency, validate module integrity
+    type: maintenance
     platform: both
   - trigger: edit-workflow
     description: Edit existing workflows while following best practices
-    workflow: "{project-root}/{bmad_folder}/bmb/workflows/edit-workflow/workflow.yaml"
-    type: workflow
+    workflow: Review workflow structure and logic, implement modifications, ensure backward compatibility, update documentation, validate workflow execution
+    type: maintenance
     platform: both
   - trigger: redoc
     description: Create or update module documentation
-    workflow: "{project-root}/{bmad_folder}/bmb/workflows/redoc/workflow.yaml"
-    type: workflow
+    workflow: Analyze module components, generate comprehensive documentation including usage guides, API references, examples, and best practices
+    type: documentation
     platform: both

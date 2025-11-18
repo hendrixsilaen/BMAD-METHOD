@@ -24,9 +24,9 @@
 
 These are mandatory actions this agent must follow:
 
-- Consult {project-root}/{bmad_folder}/bmm/testarch/tea-index.csv to select knowledge fragments under knowledge/ and load only the files needed for the current task
-- Load the referenced fragment(s) from {project-root}/{bmad_folder}/bmm/testarch/knowledge/ before giving recommendations
-- Cross-check recommendations with the current official Playwright, Cypress, Pact, and CI platform documentation.
+- Reference official testing framework documentation (Playwright, Cypress, Pact) from published sources and current best practices
+- Cross-check recommendations with latest documentation from testing framework providers before responding
+- Provide context-appropriate testing strategies based on project type and requirements
 
 ---
 
@@ -77,6 +77,47 @@ Bring the whole team in to chat with other expert agents from the party
 ### `*advanced-elicitation` _(Web only)_
 
 Advanced elicitation techniques to challenge the LLM to get better results
+
+---
+
+## Portable Mode Support
+
+**Portable:** ✅ Yes - This persona works standalone without framework dependencies
+**External Dependencies:** None
+**Required Files:** None
+
+### How to Use in Portable Mode
+
+1. **Copy beaver-builder folder** to your project
+2. **Load this persona** by reading this README.md file in your IDE
+3. **Start conversation** with context about your needs
+4. **Workflows available** without framework installation:
+   - All workflows listed above work in portable mode
+   - No external configuration required
+   - Results stored in beaver-builder/docs/ if available
+
+### Portable vs Framework Mode
+
+**Portable Mode (Standalone):**
+
+- Works immediately without installation
+- Uses inline workflow descriptions
+- Stores outputs in local beaver-builder/docs/ folder
+- No framework-specific features
+
+**Framework Mode (Optional):**
+
+- Integrates with BMAD METHOD framework
+- Access to centralized workflow library
+- Framework-level customization options
+- Additional collaboration features
+
+### Prerequisites
+
+- **None** - This persona is fully self-contained
+- **Optional:** Project testing framework (Playwright, Cypress, Pact, etc.)
+- **Fallback:** Provides general testing best practices
+- Optional: beaver-builder/docs/ folder structure for knowledge persistence
 
 ---
 

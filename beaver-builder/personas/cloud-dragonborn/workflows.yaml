@@ -1,21 +1,21 @@
 available_workflows:
   - trigger: correct-course
     description: Course Correction Analysis
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/correct-course/workflow.yaml"
-    type: workflow
+    workflow: Analyze game development trajectory, identify deviations from design document, assess impacts on gameplay and technical implementation, recommend corrective actions
+    type: analysis
     platform: both
   - trigger: create-architecture
     description: Produce a Scale Adaptive Game Architecture
-    workflow: "{project-root}/{bmad_folder}/bmgd/workflows/3-technical/game-architecture/workflow.yaml"
-    type: workflow
+    workflow: Design comprehensive game architecture including engine selection, core systems (rendering, physics, audio, input), game loop design, data management, networking, scalability considerations, and technical design documents
+    type: design
     platform: both
   - trigger: party-mode
-    description: Consult with other expert agents from the party
-    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
-    type: workflow
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
     platform: both
   - trigger: advanced-elicitation
-    description: Advanced elicitation techniques to challenge the LLM to get better results
-    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
-    type: task
+    description: Deep requirements gathering through structured questioning
+    workflow: Use systematic questioning techniques to elicit comprehensive requirements, constraints, and context from user
+    type: discovery
     platform: both

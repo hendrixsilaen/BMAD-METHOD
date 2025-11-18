@@ -1,61 +1,61 @@
 available_workflows:
   - trigger: document-project
     description: Comprehensive project documentation (brownfield analysis, architecture scanning)
-    workflow: "{project-root}/{bmad_folder}/bmm/workflows/document-project/workflow.yaml"
-    type: workflow
+    workflow: Analyze existing project codebase and create comprehensive documentation including architecture overview, component descriptions, data models, API documentation, deployment guides, and user guides
+    type: documentation
     platform: both
   - trigger: create-api-docs
     description: Create API documentation with OpenAPI/Swagger standards
-    workflow: todo
-    type: workflow
+    workflow: Generate comprehensive API documentation following OpenAPI/Swagger standards, including endpoints, request/response schemas, authentication, error codes, and usage examples
+    type: documentation
     platform: both
   - trigger: create-architecture-docs
     description: Create architecture documentation with diagrams and ADRs
-    workflow: todo
-    type: workflow
+    workflow: Document system architecture with component diagrams, data flow diagrams, deployment diagrams, architectural decision records (ADRs), and technology stack rationale
+    type: documentation
     platform: both
   - trigger: create-user-guide
     description: Create user-facing guides and tutorials
-    workflow: todo
-    type: workflow
+    workflow: Develop comprehensive user guides, tutorials, getting started documentation, troubleshooting guides, and FAQ documents for end users
+    type: documentation
     platform: both
   - trigger: audit-docs
     description: Review documentation quality and suggest improvements
-    workflow: todo
-    type: workflow
+    workflow: Audit existing documentation for completeness, accuracy, clarity, consistency, accessibility, and adherence to documentation standards; provide improvement recommendations
+    type: validation
     platform: both
   - trigger: generate-diagram
     description: Generate Mermaid diagrams (architecture, sequence, flow, ER, class, state)
-    workflow: ""
-    type: unknown
+    workflow: Create visual diagrams using Mermaid syntax for architecture, sequence flows, flowcharts, entity-relationship models, class diagrams, and state machines
+    type: documentation
     platform: both
   - trigger: validate-doc
     description: Validate documentation against standards and best practices
-    workflow: ""
-    type: unknown
+    workflow: Review documentation for adherence to standards, completeness, technical accuracy, clarity, and best practices; identify gaps and inconsistencies
+    type: validation
     platform: both
   - trigger: improve-readme
     description: Review and improve README files
-    workflow: ""
-    type: unknown
+    workflow: Enhance README files with clear project description, installation instructions, usage examples, contribution guidelines, license information, and project status badges
+    type: documentation
     platform: both
   - trigger: explain-concept
     description: Create clear technical explanations with examples
-    workflow: ""
-    type: unknown
+    workflow: Develop clear, concise technical explanations of complex concepts with practical examples, analogies, and visual aids to facilitate understanding
+    type: documentation
     platform: both
   - trigger: standards-guide
     description: Show BMAD documentation standards reference (CommonMark, Mermaid, OpenAPI)
-    workflow: ""
-    type: unknown
+    workflow: Provide comprehensive reference guide for BMAD documentation standards including CommonMark syntax, Mermaid diagram conventions, OpenAPI specifications, and best practices
+    type: reference
     platform: both
   - trigger: party-mode
-    description: Bring the whole team in to chat with other expert agents from the party
-    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
-    type: workflow
+    description: Collaborate with multiple agents on complex requests
+    workflow: Orchestrator coordinates multiple relevant agents based on request domain and complexity, facilitating multi-agent discussion and decision-making
+    type: collaboration
     platform: both
   - trigger: advanced-elicitation
-    description: Advanced elicitation techniques to challenge the LLM to get better results
-    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
-    type: task
+    description: Deep requirements gathering through structured questioning
+    workflow: Use systematic questioning techniques to elicit comprehensive requirements, constraints, and context from user
+    type: discovery
     platform: web-only

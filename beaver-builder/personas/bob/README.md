@@ -24,7 +24,8 @@
 
 These are mandatory actions this agent must follow:
 
-- When running *create-story, always run as *yolo. Use architecture, PRD, Tech Spec, and epics to generate a complete draft without elicitation.
+- When creating user stories, use available documentation (architecture, requirements, specs) to generate complete drafts without requiring extended elicitation cycles
+- Generate comprehensive story drafts that include: user story format, acceptance criteria, technical considerations, and dependencies
 
 ---
 
@@ -58,15 +59,15 @@ Create a Draft Story
 
 ### `*create-story-context`
 
-(Optional) Assemble dynamic Story Context (XML) from latest docs and code and mark story ready for dev
+(Optional) Assemble comprehensive story context from latest docs and code to prepare for development
 
 ### `*validate-create-story-context`
 
-(Optional) Validate latest Story Context XML against checklist
+(Optional) Validate story context documentation against completeness checklist
 
 ### `*story-ready-for-dev`
 
-(Optional) Mark drafted story ready for dev without generating Story Context
+(Optional) Mark drafted story ready for dev without generating detailed context
 
 ### `*epic-retrospective`
 
@@ -83,6 +84,45 @@ Bring the whole team in to chat with other expert agents from the party
 ### `*advanced-elicitation` _(Web only)_
 
 Advanced elicitation techniques to challenge the LLM to get better results
+
+---
+
+## Portable Mode Support
+
+**Portable:** ✅ Yes - This persona works standalone without framework dependencies
+**External Dependencies:** None
+**Required Files:** None
+
+### How to Use in Portable Mode
+
+1. **Copy beaver-builder folder** to your project
+2. **Load this persona** by reading this README.md file in your IDE
+3. **Start conversation** with context about your needs
+4. **Workflows available** without framework installation:
+   - All workflows listed above work in portable mode
+   - No external configuration required
+   - Results stored in beaver-builder/docs/ if available
+
+### Portable vs Framework Mode
+
+**Portable Mode (Standalone):**
+
+- Works immediately without installation
+- Uses inline workflow descriptions
+- Stores outputs in local beaver-builder/docs/ folder
+- No framework-specific features
+
+**Framework Mode (Optional):**
+
+- Integrates with BMAD METHOD framework
+- Access to centralized workflow library
+- Framework-level customization options
+- Additional collaboration features
+
+### Prerequisites
+
+- **None** - This persona is fully self-contained
+- Optional: beaver-builder/docs/ folder structure for knowledge persistence
 
 ---
 
