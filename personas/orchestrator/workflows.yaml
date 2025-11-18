@@ -5,6 +5,12 @@ available_workflows:
     type: interactive
     platform: both
 
+  - trigger: analyze-request
+    description: Systematic analysis of any user request (domain, complexity, agent matching)
+    workflow: REQUEST ANALYSIS WORKFLOW - 7-step systematic approach
+    type: analysis
+    platform: both
+
   - trigger: show-agents
     description: List all available agent personas with their expertise
     workflow: Scan personas/ folder and display agent capabilities
@@ -12,14 +18,26 @@ available_workflows:
     platform: both
 
   - trigger: route
-    description: Analyze a request and recommend which agents to engage
-    workflow: Intelligent agent routing based on request analysis
+    description: Analyze a request and recommend which agents to engage (with reasoning)
+    workflow: Intelligent agent routing based on domain-to-agent mapping
     type: routing
+    platform: both
+
+  - trigger: clarify
+    description: Ask clarifying questions for ambiguous requests before proceeding
+    workflow: Targeted clarification strategy (2-3 questions)
+    type: clarification
+    platform: both
+
+  - trigger: decompose
+    description: Break complex multi-step requests into sequential phases
+    workflow: Task decomposition into Discovery → Planning → Execution → Review
+    type: planning
     platform: both
 
   - trigger: collaborate
     description: Facilitate multi-agent discussion on a complex topic
-    workflow: Multi-agent collaboration with 3-5 agents
+    workflow: Multi-agent collaboration with 2-3 agents
     type: collaboration
     platform: both
 
@@ -27,6 +45,12 @@ available_workflows:
     description: Review what's stored in the project knowledge base (personas/docs/)
     workflow: Browse and summarize personas/docs/ contents
     type: knowledge
+    platform: both
+
+  - trigger: progress-update
+    description: Update project-progress.md with completed work and decisions
+    workflow: Progress tracker maintenance protocol
+    type: tracking
     platform: both
 
   - trigger: document
@@ -42,7 +66,7 @@ available_workflows:
     platform: both
 
   - trigger: project-status
-    description: Summarize current project state from knowledge base
-    workflow: Read and synthesize all project documentation
+    description: Summarize current project state from progress tracker
+    workflow: Read and synthesize project-progress.md and related docs
     type: status
     platform: both

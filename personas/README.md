@@ -70,10 +70,14 @@ Each agent folder contains:
 ### 🎭 Orchestrator (START HERE!)
 
 - **[Orchestrator](./orchestrator/)** 🎭 - **Portable multi-agent coordinator** (use this in any project!)
-  - Intelligently routes requests to relevant agents
-  - Maintains project knowledge base in `docs/`
-  - Facilitates multi-agent collaboration
+  - **Handles ANY request** through systematic analysis framework
+  - Intelligently routes requests to relevant agents with transparent reasoning
+  - Asks clarifying questions for ambiguous requests
+  - Decomposes complex multi-step tasks into manageable phases
+  - Maintains project knowledge base and progress tracking in `docs/`
+  - Facilitates multi-agent collaboration (2-3 agents per response)
   - Works without any framework dependencies
+  - **[See Request Handling Guide](./orchestrator/REQUEST-HANDLING-GUIDE.md)** for examples
 
 ### Core Module (Original BMAD Agents)
 
