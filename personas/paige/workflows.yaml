@@ -1,0 +1,61 @@
+available_workflows:
+  - trigger: document-project
+    description: Comprehensive project documentation (brownfield analysis, architecture scanning)
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/document-project/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: create-api-docs
+    description: Create API documentation with OpenAPI/Swagger standards
+    workflow: todo
+    type: workflow
+    platform: both
+  - trigger: create-architecture-docs
+    description: Create architecture documentation with diagrams and ADRs
+    workflow: todo
+    type: workflow
+    platform: both
+  - trigger: create-user-guide
+    description: Create user-facing guides and tutorials
+    workflow: todo
+    type: workflow
+    platform: both
+  - trigger: audit-docs
+    description: Review documentation quality and suggest improvements
+    workflow: todo
+    type: workflow
+    platform: both
+  - trigger: generate-diagram
+    description: Generate Mermaid diagrams (architecture, sequence, flow, ER, class, state)
+    workflow: ""
+    type: unknown
+    platform: both
+  - trigger: validate-doc
+    description: Validate documentation against standards and best practices
+    workflow: ""
+    type: unknown
+    platform: both
+  - trigger: improve-readme
+    description: Review and improve README files
+    workflow: ""
+    type: unknown
+    platform: both
+  - trigger: explain-concept
+    description: Create clear technical explanations with examples
+    workflow: ""
+    type: unknown
+    platform: both
+  - trigger: standards-guide
+    description: Show BMAD documentation standards reference (CommonMark, Mermaid, OpenAPI)
+    workflow: ""
+    type: unknown
+    platform: both
+  - trigger: party-mode
+    description: Bring the whole team in to chat with other expert agents from the party
+    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: advanced-elicitation
+    description: Advanced elicitation techniques to challenge the LLM to get better results
+    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
+    type: task
+    platform: web-only

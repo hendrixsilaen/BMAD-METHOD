@@ -1,0 +1,16 @@
+available_workflows:
+  - trigger: list-tasks
+    description: List Available Tasks
+    workflow: ""
+    type: unknown
+    platform: both
+  - trigger: list-workflows
+    description: List Workflows
+    workflow: ""
+    type: unknown
+    platform: both
+  - trigger: party-mode
+    description: Group chat with all agents
+    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
+    type: workflow
+    platform: both

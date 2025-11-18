@@ -1,0 +1,51 @@
+available_workflows:
+  - trigger: workflow-init
+    description: Start a new sequenced workflow path
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/init/workflow.yaml"
+    type: workflow
+    platform: ide-only
+  - trigger: workflow-status
+    description: Check workflow status and get recommendations
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: create-prd
+    description: Create Product Requirements Document (PRD)
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/2-plan-workflows/prd/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: create-epics-and-stories
+    description: Break PRD requirements into implementable epics and stories
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/2-plan-workflows/create-epics-and-stories/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: validate-prd
+    description: Validate PRD + Epics + Stories completeness and quality
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/2-plan-workflows/prd/workflow.yaml"
+    type: validation
+    platform: both
+  - trigger: tech-spec
+    description: Create Tech Spec (Simple work efforts, no PRD or Architecture docs)
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/2-plan-workflows/tech-spec/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: validate-tech-spec
+    description: Validate Technical Specification Document
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/2-plan-workflows/tech-spec/workflow.yaml"
+    type: validation
+    platform: both
+  - trigger: correct-course
+    description: Course Correction Analysis
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/correct-course/workflow.yaml"
+    type: workflow
+    platform: ide-only
+  - trigger: party-mode
+    description: Bring the whole team in to chat with other expert agents from the party
+    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: advanced-elicitation
+    description: Advanced elicitation techniques to challenge the LLM to get better results
+    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
+    type: task
+    platform: web-only

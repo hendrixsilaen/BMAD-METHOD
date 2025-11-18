@@ -1,0 +1,66 @@
+available_workflows:
+  - trigger: workflow-status
+    description: Check workflow status and get recommendations
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: sprint-planning
+    description: Generate or update sprint-status.yaml from epic files
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/sprint-planning/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: create-epic-tech-context
+    description: (Optional) Use the PRD and Architecture to create a Epic-Tech-Spec for a specific epic
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/epic-tech-context/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: validate-epic-tech-context
+    description: (Optional) Validate latest Tech Spec against checklist
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/epic-tech-context/workflow.yaml"
+    type: validation
+    platform: both
+  - trigger: create-story
+    description: Create a Draft Story
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/create-story/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: validate-create-story
+    description: (Optional) Validate Story Draft with Independent Review
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/create-story/workflow.yaml"
+    type: validation
+    platform: both
+  - trigger: create-story-context
+    description: (Optional) Assemble dynamic Story Context (XML) from latest docs and code and mark story ready for dev
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/story-context/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: validate-create-story-context
+    description: (Optional) Validate latest Story Context XML against checklist
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/story-context/workflow.yaml"
+    type: validation
+    platform: both
+  - trigger: story-ready-for-dev
+    description: (Optional) Mark drafted story ready for dev without generating Story Context
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/story-ready/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: epic-retrospective
+    description: (Optional) Facilitate team retrospective after an epic is completed
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/retrospective/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: correct-course
+    description: (Optional) Execute correct-course task
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/correct-course/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: party-mode
+    description: Bring the whole team in to chat with other expert agents from the party
+    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: advanced-elicitation
+    description: Advanced elicitation techniques to challenge the LLM to get better results
+    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
+    type: task
+    platform: web-only

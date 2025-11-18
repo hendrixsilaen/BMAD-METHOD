@@ -1,0 +1,21 @@
+available_workflows:
+  - trigger: workflow-status
+    description: Check workflow status and get recommendations
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: develop-story
+    description: Execute Dev Story workflow, implementing tasks and tests, or performing updates to the story
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/dev-story/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: story-done
+    description: Mark story done after DoD complete
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/story-done/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: code-review
+    description: Perform a thorough clean context QA code review on a story flagged Ready for Review
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/code-review/workflow.yaml"
+    type: workflow
+    platform: both

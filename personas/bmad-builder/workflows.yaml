@@ -1,0 +1,46 @@
+available_workflows:
+  - trigger: audit-workflow
+    description: Audit existing workflows for BMAD Core compliance and best practices
+    workflow: "{project-root}/{bmad_folder}/bmb/workflows/audit-workflow/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: convert
+    description: Convert v4 or any other style task agent or template to a workflow
+    workflow: "{project-root}/{bmad_folder}/bmb/workflows/convert-legacy/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: create-agent
+    description: Create a new BMAD Core compliant agent
+    workflow: "{project-root}/{bmad_folder}/bmb/workflows/create-agent/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: create-module
+    description: Create a complete BMAD compatible module (custom agents and workflows)
+    workflow: "{project-root}/{bmad_folder}/bmb/workflows/create-module/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: create-workflow
+    description: Create a new BMAD Core workflow with proper structure
+    workflow: "{project-root}/{bmad_folder}/bmb/workflows/create-workflow/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: edit-agent
+    description: Edit existing agents while following best practices
+    workflow: "{project-root}/{bmad_folder}/bmb/workflows/edit-agent/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: edit-module
+    description: Edit existing modules (structure, agents, workflows, documentation)
+    workflow: "{project-root}/{bmad_folder}/bmb/workflows/edit-module/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: edit-workflow
+    description: Edit existing workflows while following best practices
+    workflow: "{project-root}/{bmad_folder}/bmb/workflows/edit-workflow/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: redoc
+    description: Create or update module documentation
+    workflow: "{project-root}/{bmad_folder}/bmb/workflows/redoc/workflow.yaml"
+    type: workflow
+    platform: both

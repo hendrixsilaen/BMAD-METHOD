@@ -1,0 +1,31 @@
+available_workflows:
+  - trigger: workflow-status
+    description: Check workflow status and get recommendations
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: create-architecture
+    description: Produce a Scale Adaptive Architecture
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/3-solutioning/architecture/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: validate-architecture
+    description: Validate Architecture Document
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/3-solutioning/architecture/workflow.yaml"
+    type: validation
+    platform: both
+  - trigger: implementation-readiness
+    description: Validate implementation readiness - PRD, UX, Architecture, Epics aligned
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/3-solutioning/implementation-readiness/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: party-mode
+    description: Bring the whole team in to chat with other expert agents from the party
+    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: advanced-elicitation
+    description: Advanced elicitation techniques to challenge the LLM to get better results
+    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
+    type: task
+    platform: web-only

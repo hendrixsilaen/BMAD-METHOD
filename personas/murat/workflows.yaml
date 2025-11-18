@@ -1,0 +1,56 @@
+available_workflows:
+  - trigger: workflow-status
+    description: Check workflow status and get recommendations
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/workflow-status/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: framework
+    description: Initialize production-ready test framework architecture
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/framework/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: atdd
+    description: Generate E2E tests first, before starting implementation
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/atdd/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: automate
+    description: Generate comprehensive test automation
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/automate/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: test-design
+    description: Create comprehensive test scenarios
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/test-design/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: trace
+    description: Map requirements to tests (Phase 1) and make quality gate decision (Phase 2)
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/trace/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: nfr-assess
+    description: Validate non-functional requirements
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/nfr-assess/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: ci
+    description: Scaffold CI/CD quality pipeline
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/ci/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: test-review
+    description: Review test quality using comprehensive knowledge base and best practices
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/testarch/test-review/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: party-mode
+    description: Bring the whole team in to chat with other expert agents from the party
+    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: advanced-elicitation
+    description: Advanced elicitation techniques to challenge the LLM to get better results
+    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
+    type: task
+    platform: web-only

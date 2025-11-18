@@ -1,0 +1,21 @@
+available_workflows:
+  - trigger: correct-course
+    description: Course Correction Analysis
+    workflow: "{project-root}/{bmad_folder}/bmm/workflows/4-implementation/correct-course/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: create-architecture
+    description: Produce a Scale Adaptive Game Architecture
+    workflow: "{project-root}/{bmad_folder}/bmgd/workflows/3-technical/game-architecture/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: party-mode
+    description: Consult with other expert agents from the party
+    workflow: "{project-root}/{bmad_folder}/core/workflows/party-mode/workflow.yaml"
+    type: workflow
+    platform: both
+  - trigger: advanced-elicitation
+    description: Advanced elicitation techniques to challenge the LLM to get better results
+    workflow: "{project-root}/{bmad_folder}/core/tasks/advanced-elicitation.xml"
+    type: task
+    platform: both
