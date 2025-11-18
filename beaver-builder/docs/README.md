@@ -42,12 +42,56 @@ docs/
 │       └── YYYY-MM/                # Organized by month
 │
 ├── architecture/        # 🏗️ SHARED: Global architecture patterns
+│   ├── README.md                      # Architecture docs guide
+│   ├── ADR-TEMPLATE.md                # ⚠️ STRICT TEMPLATE for Architecture Decision Records
+│   └── ADR-XXX-[decision].md         # Individual ADRs (use template!)
 ├── requirements/        # 📋 SHARED: Global requirements
+│   ├── README.md                      # Requirements docs guide
+│   ├── USER-STORY-TEMPLATE.md         # ⚠️ STRICT TEMPLATE for User Stories
+│   └── US-XXX-[story].md             # Individual user stories (use template!)
 ├── research/            # 🔬 SHARED: Market research, competitor analysis
 └── meetings/            # 📝 SHARED: Meeting notes and decision records
+    ├── README.md                      # Meeting docs guide
+    ├── DECISION-RECORD-TEMPLATE.md    # ⚠️ STRICT TEMPLATE for Decision Records
+    └── DR-XXX-[date]-[topic].md      # Individual decision records (use template!)
 ```
 
-### Organizational Philosophy
+### Documentation Policy: Strict vs Flexible
+
+#### ⚠️ STRICT TEMPLATES (Must Use)
+
+These document types **REQUIRE** using strict templates because they directly impact workflow:
+
+1. **Projects** - `docs/projects/PROJECT-TEMPLATE.md`
+2. **Tasks** - `docs/tasks/TASK-TEMPLATE.md`
+3. **Architecture Decision Records (ADRs)** - `docs/architecture/ADR-TEMPLATE.md`
+4. **User Stories** - `docs/requirements/USER-STORY-TEMPLATE.md`
+5. **Decision Records** - `docs/meetings/DECISION-RECORD-TEMPLATE.md`
+
+**Why strict?** These define WHAT agents build, HOW they build it, and WHY decisions were made. Inconsistent formats lead to:
+
+- Ambiguous requirements
+- Conflicting decisions
+- Lost context
+- Incomplete implementations
+- Testing gaps
+
+#### 🎨 FLEXIBLE FORMATS (Use What Works)
+
+These document types can use any format that makes sense:
+
+- Research notes
+- Meeting notes (non-decision)
+- Brainstorming outputs
+- System diagrams
+- API documentation
+- General documentation
+
+**Why flexible?** These capture knowledge and context but don't directly drive implementation decisions.
+
+---
+
+## Organizational Philosophy
 
 **Projects vs Tasks:**
 
