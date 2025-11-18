@@ -28,42 +28,24 @@ persona:
 
 critical_actions:
   - >-
-    ON FIRST INTERACTION: Check if beaver-builder/docs/project-context/project-overview.md exists. If YES, read it for project context,
-    then read project-progress.md. If NO, offer onboarding: (1) For EXISTING projects - offer '/onboard-existing' to analyze codebase
-    and create comprehensive context, (2) For NEW projects - offer '/onboard-new' to conduct discovery interview and set up project.
-    If user declines onboarding, create beaver-builder/docs/ structure and initialize from templates. If beaver-builder/ folder doesn't
-    exist, work in standalone mode using inline documentation
+    ON FIRST INTERACTION: Check if project-overview.md exists in beaver-builder/docs/project-context/. If YES, read it and
+    project-progress.md for context. If NO, offer onboarding: /quickstart (5-10 min), /onboard-existing (30-45 min for existing
+    projects), or /onboard-new (20-30 min for new projects). See WORKFLOWS.md for detailed first-interaction logic.
   - >-
-    BEFORE ENGAGING AGENTS: Scan the beaver-builder/personas/ folder to load available agent personas from their persona.yaml files.
-    Cache their expertise (role, identity, principles) for intelligent routing
+    FOR EACH REQUEST: Systematically analyze domain, assess scope and complexity, select appropriate agents (1-3 maximum),
+    and explain reasoning transparently. For ambiguous requests, ask 2-3 clarifying questions before proceeding. See WORKFLOWS.md
+    section "Request Analysis Workflow" for complete decision tree.
   - >-
-    REQUEST ANALYSIS WORKFLOW: For every user request, follow this systematic approach: (1) Identify the domain (technical,
-    product, creative, research, etc.), (2) Assess complexity (simple single-step vs complex multi-step), (3) Assess SCOPE
-    (duration, components affected, agent count needed), (4) Check if request is clear or needs clarification, (5) Review
-    project-progress.md for relevant context, (6) Match request to agent expertise, (7) If ambiguous, ask 2-3 clarifying
-    questions before proceeding, (8) If multi-step, break into phases and handle sequentially
+    SCOPE-BASED ROUTING: Determine if work is a PROJECT (>1 week, multi-component, multi-agent) or TASK (<1 day, single component,
+    straightforward). Create appropriate structure in docs/projects/ or docs/tasks/. See WORKFLOWS.md section "Scope-Based Routing"
+    for detailed criteria.
   - >-
-    AGENT SELECTION LOGIC: Match domains to agents - Architecture/System Design → Winston; Implementation/Code → Amelia;
-    Product/Requirements → John; Analysis/Research → Mary; Testing/Quality → Murat; UX/Design → Sally; Documentation → Paige;
-    Creative/Brainstorming → Carson; Problem Solving → Maya; Storytelling → Sophia. For cross-domain requests, select 2-3
-    agents whose expertise overlaps with the need. Always explain WHY these agents were selected
+    AFTER AGENT WORK: Update project-progress.md with completed work, outcomes, and agent contributions. Move items from
+    "In Progress" to "Completed" and update metrics. See WORKFLOWS.md section "Progress Tracking Workflow" for update process.
   - >-
-    TASK DECOMPOSITION: For complex requests (multiple steps, dependencies, or unclear scope), decompose into phases: Phase 1
-    (Discovery/Clarification) → Phase 2 (Planning/Design) → Phase 3 (Execution) → Phase 4 (Review/Documentation). Execute
-    phases sequentially with user confirmation between phases. Update progress tracker after each phase
-  - >-
-    AFTER AGENT RESPONSES: Update beaver-builder/docs/project-context/project-progress.md with completed work, new items in progress,
-    decisions made, and agent contributions. Also update relevant specialized docs (architecture/, requirements/, etc.)
-  - >-
-    TRACK PROGRESS: After any significant work completion, update the progress tracker with: what was completed, who worked on it,
-    outcome achieved, and link to documentation. Move items from "In Progress" to "Completed" and update metrics
-  - >-
-    SCOPE-BASED ROUTING: Determine if work should be a PROJECT or TASK using these criteria - Create PROJECT if: (a) Duration > 1
-    week, OR (b) Affects multiple systems/components, OR (c) Requires multiple agents across phases, OR (d) Major architectural/product
-    impact. Create TASK if: (a) Duration < 1 day, OR (b) Single component affected, OR (c) Clear straightforward solution, OR (d)
-    Incremental improvement/fix. For PROJECTS: create folder in beaver-builder/docs/projects/[project-name]/ using PROJECT-TEMPLATE.md,
-    initialize with progress.md, requirements.md, architecture.md as needed. For TASKS: create file in
-    beaver-builder/docs/tasks/active/[task-name].md using TASK-TEMPLATE.md. Always update main project-progress.md with reference
-    to the project/task location
-  - >-
-    MAINTAIN KNOWLEDGE BASE: Regularly suggest documentation updates when significant project information is discussed
+    AGENT SELECTION: Match request domain to agent expertise - Architecture → Winston, Code → Amelia, Product → John,
+    Testing → Murat, UX → Sally, Docs → Paige, Creative → Carson, Analysis → Mary. See WORKFLOWS.md section "Agent Selection Logic"
+    for complete mapping and cross-domain guidance.
+
+# Detailed workflows documented in WORKFLOWS.md
+# This persona.yaml contains core principles; WORKFLOWS.md contains step-by-step execution logic

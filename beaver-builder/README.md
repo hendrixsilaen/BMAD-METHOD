@@ -1,38 +1,60 @@
-# BMAD METHOD Personas
+# Beaver-Builder: Portable AI Agent Team
 
-This directory contains all the AI agent personas from the BMAD METHOD project. Each persona represents a specialized expert agent with unique skills, communication styles, and workflows.
+> **Stop repeating context. Start building faster.**
+> A self-contained system of 21+ AI expert personas that remember your project, document decisions, and provide specialized expertise.
 
-## 🚀 Portable AI Expert Team
+## The Problem
 
-**NEW:** This `beaver-builder/` folder is now **completely portable and self-contained**!
+Every time you work with AI assistants:
 
-Copy it to any project and get instant access to 20+ specialized AI agents coordinated by an intelligent orchestrator. No framework dependencies, no complex setup - just drop it in your project and start collaborating.
+- ❌ You repeat the same project context over and over
+- ❌ Decisions get lost between conversations
+- ❌ Generic AI gives generic answers
+- ❌ No specialized expertise (architecture, PM, testing, UX)
+- ❌ Each session starts from zero
 
-**→ [Read the Portable Guide](./PORTABLE-GUIDE.md) to get started!**
+## The Solution
 
-### Quick Start (Portable Mode)
+Beaver-builder gives you a **portable AI expert team**:
 
-1. Copy `beaver-builder/` folder to your project
-2. **First time setup?** Run onboarding:
-   - `/onboard-existing` - Deep analysis of existing project (~30-45 min)
-   - `/onboard-new` - Discovery interview for new project (~20-30 min)
-3. Use **slash commands** for quick access:
-   - `/orchestrate` - Let the orchestrator help with any request
-   - `/status` - Check project status
-   - `/agent` - Load specific agent (21 available)
-   - `/create-project` - Start new major initiative
-   - `/create-task` - Create small task
-   - **[See all 17 commands](./.claude/commands/README.md)**
-4. Or load `beaver-builder/personas/orchestrator/README.md` directly
-5. Say: _"Hi, I need help with my project"_
+- ✅ **21 specialized agents** - Architect, PM, senior dev, QA, UX designer, technical writer, and more
+- ✅ **Project memory** - All context persists in `docs/` folder across sessions
+- ✅ **Decision documentation** - Automatic ADRs, user stories, progress tracking
+- ✅ **100% portable** - Just copy one folder to any project
+- ✅ **Framework optional** - Works standalone or with BMAD METHOD
+- ✅ **Intelligent routing** - Orchestrator selects the right expert for each task
 
-### Quick Start (BMAD Framework Mode)
+## Quick Start (3 Steps)
 
-If you're using the full BMAD METHOD framework:
+### 1. Copy beaver-builder/ to your project
 
-1. Run `npx bmad-method@alpha install`
-2. Load any agent from `{bmad_folder}/`
-3. Run `*workflow-init` to start
+```bash
+cp -r path/to/beaver-builder /your/project/
+cd /your/project
+```
+
+### 2. Run onboarding
+
+Choose based on your situation:
+
+- **First time?** → `/quickstart` (5-10 min, minimal setup, start immediately)
+- **Existing project?** → `/onboard-existing` (30-45 min, deep codebase analysis)
+- **New project?** → `/onboard-new` (20-30 min, discovery interview)
+
+**See [Quick Start Guide](./QUICK-START.md) for details**
+
+### 3. Start working
+
+```bash
+/orchestrate    # General help - orchestrator routes to right expert
+/status         # Check project status and progress
+/create-project # Start major initiative
+/create-task    # Create small task
+/architecture   # System design (loads Winston)
+/implement      # Write code (loads Amelia)
+```
+
+**[See all 17 commands](./.claude/commands/README.md)**
 
 ---
 
@@ -195,6 +217,28 @@ This `beaver-builder/` folder is designed to be:
 - **Portable**: Copy to any project and start working
 - **Framework-optional**: Works standalone or within BMAD METHOD
 - **Knowledge-based**: Agents learn and store project context in `docs/`
+
+## Relationship to BMAD METHOD
+
+Beaver-builder was originally part of the BMAD METHOD framework but is now **fully standalone and portable**.
+
+**Use beaver-builder standalone if:**
+
+- ✅ You want portable AI agents in any project
+- ✅ You don't need the full BMAD framework
+- ✅ You want simplicity and flexibility
+- ✅ You're working on a single project
+- ✅ You prefer file-based configuration
+
+**Use beaver-builder with BMAD if:**
+
+- ✅ You're using the full BMAD METHOD workflow
+- ✅ You want deeper integration with BMAD tools
+- ✅ You need framework-specific workflows
+- ✅ You're managing multiple projects with shared configuration
+- ✅ You want the complete BMAD ecosystem
+
+**Bottom line:** Beaver-builder works great on its own. BMAD METHOD adds additional capabilities if you need them, but it's 100% optional.
 
 ## Slash Commands
 
