@@ -13,9 +13,15 @@ Copy it to any project and get instant access to 20+ specialized AI agents coord
 ### Quick Start (Portable Mode)
 
 1. Copy `beaver-builder/` folder to your project
-2. Load `beaver-builder/personas/orchestrator/README.md` in your IDE
-3. Say: _"Hi, I need help with my project"_
-4. Let the orchestrator engage the right agents for your needs
+2. Use **slash commands** for quick access:
+   - `/orchestrate` - Let the orchestrator help with any request
+   - `/status` - Check project status
+   - `/agent` - Load specific agent (21 available)
+   - `/create-project` - Start new major initiative
+   - `/create-task` - Create small task
+   - **[See all 15 commands](./.claude/commands/README.md)**
+3. Or load `beaver-builder/personas/orchestrator/README.md` directly
+4. Say: _"Hi, I need help with my project"_
 
 ### Quick Start (BMAD Framework Mode)
 
@@ -187,11 +193,44 @@ This `beaver-builder/` folder is designed to be:
 - **Framework-optional**: Works standalone or within BMAD METHOD
 - **Knowledge-based**: Agents learn and store project context in `docs/`
 
+## Slash Commands
+
+Beaver-builder includes **15 slash commands** for quick access to common workflows:
+
+**Essential:**
+
+- `/orchestrate` - Start orchestrator for any request
+- `/status` - Check project status overview
+- `/agent` - Load specific agent
+
+**Project Management:**
+
+- `/create-project` - Initialize major project
+- `/create-task` - Create small task
+- `/list-projects` - Show all projects
+- `/list-tasks` - Show all tasks
+
+**Workflows:**
+
+- `/brainstorm` - Creative ideation
+- `/design` - Design solutions
+- `/architecture` - System architecture
+- `/implement` - Write code
+- `/test` - Testing strategy
+- `/document` - Create documentation
+- `/review` - Code review
+- `/party-mode` - Multi-agent collaboration
+
+**→ [See Command Documentation](./.claude/commands/README.md)** for detailed usage
+
+---
+
 ## Learn More
 
 ### Beaver Builder Documentation (Portable Mode)
 
 - **[Portable Guide](./PORTABLE-GUIDE.md)** - Complete usage guide for any project
+- **[Slash Commands](./.claude/commands/README.md)** - Quick command reference (15 commands)
 - **[Orchestrator Documentation](./personas/orchestrator/README.md)** - Your intelligent coordinator
 - **[Request Handling Guide](./personas/orchestrator/REQUEST-HANDLING-GUIDE.md)** - How orchestrator handles different requests
 - **[Projects Guide](./docs/projects/README.md)** - Managing major initiatives (multi-week work)
